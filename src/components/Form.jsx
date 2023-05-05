@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = ({field, onSubmit, action}) => (
+const Form = ({field, onSubmit, action}) => {return(
   <div>
     <form onSubmit={handleSubmit}>
 
@@ -21,6 +21,6 @@ const Form = ({field, onSubmit, action}) => (
       <button type="submit" className="btn">{action}</button>
     </form>
   </div>
-);
+)};
 
 export default Form;
