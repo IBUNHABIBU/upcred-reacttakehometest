@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const Form = ({ field, onSubmit, action }) => {
   const [formData, setFormData] = useState({});
@@ -6,6 +7,11 @@ const Form = ({ field, onSubmit, action }) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSubmit(formData);
+    };
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -31,9 +37,9 @@ const Form = ({ field, onSubmit, action }) => {
 };
 
 Form.propTypes = {
-    field: PropTypes.arrayOf(PropTypes.object).isRequired,
-    onSubmit: PropTypes.func.isRequired,
-    action: PropTypes.string.isRequired,
+  field: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  action: PropTypes.string.isRequired,
 };
 
 export default Form;
