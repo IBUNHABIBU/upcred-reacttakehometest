@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Form = ({field, onSubmit, action}) => {return(
+const Form = ({field, onSubmit, action}) => {
+    const [formDate, setFormDate] = useState({});
+    return(
   <div>
     <form onSubmit={handleSubmit}>
 
@@ -21,6 +23,7 @@ const Form = ({field, onSubmit, action}) => {return(
       <button type="submit" className="btn">{action}</button>
     </form>
   </div>
-)};
+)
+};
 
 export default Form;
