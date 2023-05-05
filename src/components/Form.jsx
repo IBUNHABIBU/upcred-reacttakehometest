@@ -39,11 +39,11 @@ const Form = ({ field, onSubmit, action }) => {
 Form.propTypes = {
   field: PropTypes.arrayOf(
     PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired,
-        type: PropTypes.string.isRequired,
-        defaultValue: PropTypes.string,
-        required: PropTypes.bool,
+      name: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      defaultValue: PropTypes.string,
+      required: PropTypes.bool,
     }),
   ).isRequired,
   onSubmit: PropTypes.func.isRequired,
