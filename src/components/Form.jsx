@@ -4,7 +4,7 @@ const Form = ({field, onSubmit, action}) => {
     const [formDate, setFormDate] = useState({});
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormDate({ ...formDate, [name]: value });
+        setFormData((prevState) => ({ ...prevState, [name]: value }));
     };
     return(
   <div>
