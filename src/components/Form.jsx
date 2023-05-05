@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 
 const Form = ({field, onSubmit, action}) => {
     const [formDate, setFormDate] = useState({});
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormDate({ ...formDate, [name]: value });
+    };
     return(
   <div>
     <form onSubmit={handleSubmit}>
