@@ -37,7 +37,7 @@ const Form = ({ field, onSubmit, action }) => {
 };
 
 Form.propTypes = {
-  field: PropTypes.arrayOf(PropTypes.object).isRequired,
+  field: PropTypes.array.isRequired,
   onSubmit: PropTypes.func.isRequired,
   action: PropTypes.string.isRequired,
 };
