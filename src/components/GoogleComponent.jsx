@@ -4,7 +4,7 @@ import { cliendId } from '../constants/constants';
 
 const GoogleComponent = () => {
   const responseGoogle = (response) => {
-    console.log(response.profileObj);
+    console.log(response);
   };
 
   return (
