@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import FacebookLogin from 'react-facebook-login';
+import { facebookAppId } from '../constants/constants';
 
 const FacebookComponent = () => {
   const [user, setUser] = useState({
@@ -32,7 +33,7 @@ const FacebookComponent = () => {
   } else {
     fbContent = (
       <FacebookLogin
-        appId={appId}
+        appId={facebookAppId}
         autoLoad
         fields="name,email,picture"
         onClick={componentClicked}
