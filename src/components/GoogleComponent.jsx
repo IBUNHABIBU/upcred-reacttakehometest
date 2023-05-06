@@ -1,5 +1,6 @@
 import React from 'react';
 import GoogleLogin from 'react-google-login';
+import { cliendId } from '../constants/constants';
 
 
 const GoogleComponent = () => {
@@ -9,7 +10,7 @@ const GoogleComponent = () => {
   return (
     <div>
       <GoogleLogin
-        clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+        clientId={cliendId}
         buttonText="Login"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
