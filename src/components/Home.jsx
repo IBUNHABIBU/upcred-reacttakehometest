@@ -30,7 +30,7 @@ const Home = () => {
    
 
   return (
-    <div>Home</div>
+    <div>{fbContent}</div>
   );
 };
 
