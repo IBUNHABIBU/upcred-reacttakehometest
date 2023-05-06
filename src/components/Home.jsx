@@ -10,8 +10,16 @@ const Home = () => {
 
   });
 
+  const navigate = useNavigate();
+
   const responseFacebook = (response) => {
     console.log(response);
+    setUser({
+      id: response.id,
+      isLoggedIn: true,
+      name: response.name,
+      email: response.email,
+    });
   };
 
   const componentClicked = () => {
