@@ -1,8 +1,11 @@
 import React from 'react'
+import FacebookComponent from './FacebookComponent'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <FacebookComponent />
+    </div>
   )
 }
 
