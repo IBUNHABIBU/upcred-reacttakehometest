@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ReactFacebookLogin from 'react-facebook-login';
 
 const Home = () => {
   const [user, setUser] = useState({
@@ -19,6 +20,7 @@ const Home = () => {
 
   let fbContent;
   if (user.isLoggedIn) { 
+    fbContent = null;
   } else {
     fbContent = ( <FacebookLogin
       appId="216650907742077"
