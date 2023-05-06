@@ -1,19 +1,20 @@
 import React from 'react';
 import { GoogleLogout } from 'react-google-login';
+import { cliendId } from '../constants/constants';
 
 const GoogleLogoutComponent = () => {
-    const logout = () => {
-        console.log('logout');
-    }
+  const logout = () => {
+    console.log('logout');
+  };
   return (
     <div>
-        <GoogleLogout
-      clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
-      buttonText="Logout"
-      onLogoutSuccess={logout}
-    />
+      <GoogleLogout
+        clientId={cliendId}
+        buttonText="Logout"
+        onLogoutSuccess={logout}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default GoogleLogoutComponent
+export default GoogleLogoutComponent;

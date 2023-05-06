@@ -11,7 +11,6 @@ const FacebookComponent = () => {
 
   });
 
-
   const responseFacebook = (response) => {
     console.log(response);
     setUser({
