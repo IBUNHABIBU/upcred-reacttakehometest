@@ -12,7 +12,7 @@ const Home = () => {
   if (user.isLoggedIn) { 
   } else {
     fbContent = ( <FacebookLogin
-      appId="1088597931155576"
+      appId="216650907742077"
       autoLoad={true}
       fields="name,email,picture"
       onClick={componentClicked}
