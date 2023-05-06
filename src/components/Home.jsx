@@ -8,6 +8,15 @@ const Home = () => {
     email: '',
 
   });
+
+  const responseFacebook = (response) => {
+    console.log(response);
+  }
+
+  const componentClicked = () => {
+    console.log('clicked');
+  }
+
   let fbContent;
   if (user.isLoggedIn) { 
   } else {
