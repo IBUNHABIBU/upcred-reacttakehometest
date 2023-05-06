@@ -1,12 +1,10 @@
-import React from 'react'
-import FacebookComponent from './FacebookComponent'
+import React from 'react';
+import FacebookComponent from './FacebookComponent';
 
-const Home = () => {
-  return (
-    <div>
-      <FacebookComponent />
-    </div>
-  )
-}
+const Home = () => (
+  <div>
+    <FacebookComponent />
+  </div>
+);
 
-export default Home
+export default Home;
