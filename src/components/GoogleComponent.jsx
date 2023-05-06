@@ -6,6 +6,7 @@ const GoogleComponent = () => {
   const responseGoogle = (response) => {
     console.log(response);
   };
+  
   return (
     <div>
       <GoogleLogin

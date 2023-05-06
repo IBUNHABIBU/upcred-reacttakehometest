@@ -11,7 +11,6 @@ const FacebookComponent = () => {
 
   });
 
-  const navigate = useNavigate();
 
   const responseFacebook = (response) => {
     console.log(response);
