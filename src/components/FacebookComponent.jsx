@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import FacebookLogin from 'react-facebook-login';
-import dotenv from 'dotenv';
 
-dotenv.config();
 
 const FacebookComponent = () => {
   const [user, setUser] = useState({
