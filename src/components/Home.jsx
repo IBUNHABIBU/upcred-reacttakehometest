@@ -4,9 +4,17 @@ const Home = () => {
   const [user, setUser] = useState({
     id: '',
     isLoggedIn: false,
-    password: '',
+    name: '',
+    email: '',
 
   });
+  let fbContent;
+  if (user.isLoggedIn) { 
+  } else {
+    fbContent = ();
+  }
+   
+
   return (
     <div>Home</div>
   );
