@@ -32,7 +32,7 @@ const FacebookComponent = () => {
   } else {
     fbContent = (
       <FacebookLogin
-        appId="216650907742077"
+        appId={process.env.REACT_APP_FACEBOOK_APP_ID}
         autoLoad
         fields="name,email,picture"
         onClick={componentClicked}
