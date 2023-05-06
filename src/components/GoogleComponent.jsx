@@ -2,7 +2,6 @@ import React from 'react';
 import GoogleLogin from 'react-google-login';
 import { cliendId } from '../constants/constants';
 
-
 const GoogleComponent = () => {
   const responseGoogle = (response) => {
     console.log(response);

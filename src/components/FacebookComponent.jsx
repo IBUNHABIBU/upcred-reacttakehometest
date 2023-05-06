@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import FacebookLogin from 'react-facebook-login';
 
-
 const FacebookComponent = () => {
   const [user, setUser] = useState({
     id: '',
