@@ -4,8 +4,6 @@ import FacebookLogin from 'react-facebook-login';
 import { facebookAppId } from '../constants/constants';
 
 const FacebookComponent = () => {
-  
-
   const navigate = useNavigate();
 
   const responseFacebook = (response) => {
