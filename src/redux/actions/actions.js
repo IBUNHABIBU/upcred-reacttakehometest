@@ -1,8 +1,9 @@
 import actionTypes from '../constants';
 
-const setUser = (user) => ({
+export const loginFacebook = (response) => ({
   type: actionTypes.SET_USER,
-  payload: user,
+  payload: response,
 });
 
-export default setUser;
+export const 
+
