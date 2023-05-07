@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
 import { useDispatch, useSelector } from 'react-redux';
 import { facebookAppId } from '../constants/constants';
-import { loginFacebook, logout } from '../redux/actions/actions';
+import { loginFacebook } from '../redux/actions/actions';
 
 const FacebookComponent = () => {
   const user = useSelector((state) => state.user);
@@ -19,7 +19,6 @@ const FacebookComponent = () => {
   const componentClicked = () => {
     console.log('clicked');
   };
-
 
   let fbContent;
   if (user.isLogged) {
