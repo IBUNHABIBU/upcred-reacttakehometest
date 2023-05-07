@@ -15,10 +15,9 @@ const Login = () => {
   }, []);
 
   return (
-    <div>
+    <div className="login">
       <FacebookComponent />
       <GoogleComponent />
-      <GoogleLogoutComponent />
     </div>
   );
 };
