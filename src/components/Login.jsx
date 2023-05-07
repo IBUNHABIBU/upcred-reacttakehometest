@@ -23,9 +23,8 @@ const Login = () => {
           <GoogleComponent />
         </div>
         <div className="form">
-        <Form
-        errors={errors}
-        field={
+          <Form
+            field={
         [
           {
             name: 'email', type: 'email', label: 'Email', required: true,
@@ -35,9 +34,9 @@ const Login = () => {
           },
         ]
       }
-        onSubmit={(formData) => handleSubmit(formData)}
-        action="Login"
-      />
+            onSubmit={(formData) => handleSubmit(formData)}
+            action="Login"
+          />
         </div>
       </div>
     </div>
