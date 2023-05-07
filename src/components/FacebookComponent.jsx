@@ -7,7 +7,6 @@ import { loginFacebook, logout } from '../redux/actions/actions';
 
 const FacebookComponent = () => {
   const user = useSelector((state) => state.user);
-  // const user = false;
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -15,6 +14,10 @@ const FacebookComponent = () => {
     console.log('Response', response.accessToken);
     dispatch(loginFacebook(response));
     navigate('/products');
+  };
+
+  const componentClicked = () => {
+    console.log('clicked');
   };
 
   const handleLogout = () => {
