@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
 import { facebookAppId } from '../constants/constants';
 import { useDispatch } from 'react-redux';
+import setUser from '../redux/actions/actions';
 
 const FacebookComponent = () => {
   const navigate = useNavigate();
@@ -10,8 +11,7 @@ const FacebookComponent = () => {
 
   const responseFacebook = (response) => {
     console.log(response);
-    dispatch(setUser)
-   
+    dispatch(setUser(response))
     navigate('/products');
   };
 
