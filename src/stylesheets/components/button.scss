@@ -1,0 +1,30 @@
+.btn {
+    background-color: rgb(5, 129, 191);
+    border: none;
+    color: white;
+    padding: 8px 48px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  
+    &--list {
+      background-color: #3498db;
+      color: #fff;
+      margin-right: 10px;
+      width: 20%;
+    }
+  
+    &--add {
+      background-color: #e74c3c;
+      color: #fff;
+    }
+  
+    &:hover {
+      background-color: $hover-color;
+      color: white;
+    }
+  
+  }
