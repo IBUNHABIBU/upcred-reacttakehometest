@@ -1,10 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
-import { cliendId } from '../constants/constants';
 import { useDispatch } from 'react-redux';
+import { cliendId } from '../constants/constants';
 import { loginGoogle } from '../redux/actions/actions';
-
 
 const GoogleComponent = () => {
   const dispatch = useDispatch();
