@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { gapi } from 'gapi-script';
 import FacebookComponent from './FacebookComponent';
 import GoogleComponent from './GoogleComponent';
-import GoogleLogoutComponent from './GoogleLogoutComponent';
 import { cliendId } from '../constants/constants';
 import Form from './Form';
 
