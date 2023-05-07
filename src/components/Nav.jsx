@@ -1,13 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { list } from '../constants/constants';
+import { useSelector } from 'react-redux';
 
 const Nav = () => {
+  const user = useSelector((state) => state.user);
+  console.log(user);
   const handleLogout = () => {
     console.log('logout');
   };
-
-  const user = false;
 
   return (
     <nav className="nav">
