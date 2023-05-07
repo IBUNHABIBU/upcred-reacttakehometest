@@ -12,7 +12,7 @@ const FacebookComponent = () => {
   const dispatch = useDispatch();
 
   const responseFacebook = (response) => {
-    console.log('Response', response);
+    console.log('Response', response.accessToken);
     dispatch(setUser(response));
     navigate('/products');
   };
