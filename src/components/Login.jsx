@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { gapi } from 'gapi-script';
 import { FacebookLogout } from 'react-facebook-login';
+import { useDispatch } from 'react-redux';
 import FacebookComponent from './FacebookComponent';
 import GoogleComponent from './GoogleComponent';
 import { cliendId, facebookAppId } from '../constants/constants';
 import Form from './Form';
 import { logout } from '../redux/actions/actions';
-import { useDispatch } from 'react-redux';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -22,6 +22,9 @@ const Login = () => {
     console.log(formData);
   };
 
+  const handleLogout = () => {
+    dispatch(logout());
+  };
   return (
     <div className="login">
       <div className="container">
@@ -49,10 +52,7 @@ const Login = () => {
           <GoogleComponent />
           <FacebookLogout
             appId={facebookAppId}
-            onLogout={() => {
-              // Logout logic here, for example:
-              dispatch(logout());
-            }}
+            onLogout={handleLogout}
           />
         </div>
       </div>
