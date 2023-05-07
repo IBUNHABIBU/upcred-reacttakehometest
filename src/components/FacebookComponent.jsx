@@ -21,7 +21,7 @@ const FacebookComponent = () => {
       name: response.name,
       email: response.email,
     });
-    
+    navigate('/products');
   };
 
   const componentClicked = () => {
