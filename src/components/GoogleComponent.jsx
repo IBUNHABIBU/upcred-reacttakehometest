@@ -1,10 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import { cliendId } from '../constants/constants';
 
 const GoogleComponent = () => {
+  const navigate = useNavigate();
   const responseGoogle = (response) => {
     console.log(response);
+    navigate('/products');
   };
 
   return (
