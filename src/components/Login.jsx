@@ -44,7 +44,6 @@ const Login = () => {
         <div className="service">
           <FacebookComponent />
           <GoogleComponent />
-          <FbLogout />
         </div>
       </div>
     </div>
