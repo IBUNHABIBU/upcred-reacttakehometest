@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { gapi } from 'gapi-script';
+import FacebookComponent from './FacebookComponent';
+import GoogleComponent from './GoogleComponent';
+import GoogleLogoutComponent from './GoogleLogoutComponent';
+import { cliendId } from '../constants/constants';
 
-const Login = () => (
-  <div>Login</div>
-);
+const Home = () => {
+  useEffect(() => {
+    gapi.load('auth2', () => {
+      gapi.auth2.init({
+        client_id: cliendId,
+      });
+    });
+  }, []);
 
-export default Login;
+  return (
+    <div>
+      <FacebookComponent />
+      <GoogleComponent />
+      <GoogleLogoutComponent />
+    </div>
+  );
+};
+
+export default Home;
