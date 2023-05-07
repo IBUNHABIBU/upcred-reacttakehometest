@@ -1,12 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { list } from '../constants/constants';
 import { useSelector } from 'react-redux';
-import FacebookComponent from './FacebookComponent';
+import { list } from '../constants/constants';
 
 const Nav = () => {
   const userState = useSelector((state) => state.user);
-  console.log("user", userState);
+  console.log('user', userState);
   const user = false;
   const handleLogout = () => {
     console.log('logout');
@@ -34,7 +33,7 @@ const Nav = () => {
           <button type="submit" className="btn" onClick={handleLogout}>Logout</button>) : (
             <NavLink to="/login" className="link">Login</NavLink>
         )}
-        
+
       </div>
     </nav>
   );
