@@ -1,15 +1,10 @@
-import { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
 import { facebookAppId } from '../constants/constants';
 
 const FacebookComponent = () => {
-  const [user, setUser] = useState({
-    id: '',
-    isLoggedIn: false,
-    name: '',
-    email: '',
-  });
+  
 
   const navigate = useNavigate();
 
