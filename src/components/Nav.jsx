@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { list } from '../constants/constants';
 
-const Nav = () => (
+const Nav = () => {(
   <nav className="nav">
     <div className="nav__logo">
       <span />
@@ -23,6 +23,6 @@ const Nav = () => (
       <button type="submit" className="btn" onClick={handleLogout}>Logout</button>
     </div>
   </nav>
-);
+)};
 
 export default Nav;
