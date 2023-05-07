@@ -35,9 +35,7 @@ const FacebookComponent = () => {
       />
       <FacebookLogout
   appId={facebookAppId}
-  onLogout={() => {
-    // handle logout
-  }}
+  onLogout={handleLogout}
 />
       </div>
     );
