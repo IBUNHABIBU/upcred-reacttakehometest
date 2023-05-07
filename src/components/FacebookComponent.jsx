@@ -11,13 +11,11 @@ const FacebookComponent = () => {
   const dispatch = useDispatch();
 
   const responseFacebook = (response) => {
-    console.log('Response', response.accessToken);
     dispatch(loginFacebook(response));
     navigate('/products');
   };
 
   const componentClicked = () => {
-    console.log('clicked');
   };
 
   let fbContent;
