@@ -15,12 +15,8 @@ const FacebookComponent = () => {
     navigate('/products');
   };
 
-  const componentClicked = () => {
-  };
-
   let fbContent;
   if (user.isLogged) {
-    console.log('user', user.isLogged);
     fbContent = null;
   } else {
     fbContent = (
@@ -29,7 +25,6 @@ const FacebookComponent = () => {
           appId={facebookAppId}
           autoLoad
           fields="name,email,picture"
-          onClick={componentClicked}
           callback={responseFacebook}
         />
       </div>
