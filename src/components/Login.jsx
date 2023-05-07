@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { gapi } from 'gapi-script';
+import { useDispatch } from 'react-redux';
 import FacebookComponent from './FacebookComponent';
 import GoogleComponent from './GoogleComponent';
 import { cliendId } from '../constants/constants';
 import Form from './Form';
-import { useDispatch } from 'react-redux';
 
 const Login = () => {
   const dispatch = useDispatch();
