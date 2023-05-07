@@ -37,6 +37,9 @@ const Login = () => {
             action="Login"
           />
         </div>
+
+        <hr className="hr" />
+        <h6 className="h6">Or </h6>
         <div className="service">
           <FacebookComponent />
           <GoogleComponent />
