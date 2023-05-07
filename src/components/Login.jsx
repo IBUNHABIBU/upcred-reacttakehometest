@@ -14,13 +14,14 @@ const Login = () => {
     });
   }, []);
 
+  const handleSubmit = (formData) => {
+    console.log(formData);
+  };
+
   return (
     <div className="login">
       <div className="container">
-        <div className="service">
-          <FacebookComponent />
-          <GoogleComponent />
-        </div>
+
         <div className="form">
           <Form
             field={
@@ -36,6 +37,10 @@ const Login = () => {
             onSubmit={(formData) => handleSubmit(formData)}
             action="Login"
           />
+        </div>
+        <div className="service">
+          <FacebookComponent />
+          <GoogleComponent />
         </div>
       </div>
     </div>
