@@ -17,7 +17,7 @@ const Login = () => {
   }, []);
 
   const handleSubmit = (formData) => {
-    dispatch("data"));
+    dispatch(formData);
   };
 
   return (
