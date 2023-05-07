@@ -50,10 +50,6 @@ const Login = () => {
         <div className="service">
           <FacebookComponent />
           <GoogleComponent />
-          <FacebookLogout
-            appId={facebookAppId}
-            onLogout={handleLogout}
-          />
         </div>
       </div>
     </div>
