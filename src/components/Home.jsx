@@ -6,7 +6,6 @@ import GoogleLogoutComponent from './GoogleLogoutComponent';
 import { cliendId } from '../constants/constants';
 
 const Home = () => {
-
   useEffect(() => {
     gapi.load('auth2', () => {
       gapi.auth2.init({
@@ -15,12 +14,13 @@ const Home = () => {
     });
   }, []);
 
-  return(
-  <div>
-    <FacebookComponent />
-    <GoogleComponent />
-    <GoogleLogoutComponent />
-  </div>
-)};
+  return (
+    <div>
+      <FacebookComponent />
+      <GoogleComponent />
+      <GoogleLogoutComponent />
+    </div>
+  );
+};
 
 export default Home;
