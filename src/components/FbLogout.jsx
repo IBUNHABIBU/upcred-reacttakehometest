@@ -8,24 +8,18 @@ import { loginFacebook, logout } from '../redux/actions/actions';
 const FacebookComponent = () => {
   const dispatch = useDispatch();
 
- 
-
-  
-
   const handleLogout = () => {
     dispatch(logout());
   };
 
-    let fbContent;
-    fbContent = (
-    
-        <FacebookLogout
-          appId={facebookAppId}
-          onLogout={handleLogout}
-        />
-      
-    );
-  
+  const fbContent = (
+
+    <FacebookLogout
+      appId={facebookAppId}
+      onLogout={handleLogout}
+    />
+
+  );
 
   return (
     <div>{fbContent}</div>
