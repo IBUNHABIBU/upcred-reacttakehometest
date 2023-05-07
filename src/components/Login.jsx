@@ -4,6 +4,7 @@ import FacebookComponent from './FacebookComponent';
 import GoogleComponent from './GoogleComponent';
 import GoogleLogoutComponent from './GoogleLogoutComponent';
 import { cliendId } from '../constants/constants';
+import Form from './Form';
 
 const Login = () => {
   useEffect(() => {
@@ -16,8 +17,29 @@ const Login = () => {
 
   return (
     <div className="login">
-      <FacebookComponent />
-      <GoogleComponent />
+      <div className="container">
+        <div className="service">
+          <FacebookComponent />
+          <GoogleComponent />
+        </div>
+        <div className="form">
+        <Form
+        errors={errors}
+        field={
+        [
+          {
+            name: 'email', type: 'email', label: 'Email', required: true,
+          },
+          {
+            name: 'password', type: 'password', label: 'Password', required: true,
+          },
+        ]
+      }
+        onSubmit={(formData) => handleSubmit(formData)}
+        action="Login"
+      />
+        </div>
+      </div>
     </div>
   );
 };
