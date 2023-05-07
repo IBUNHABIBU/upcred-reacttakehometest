@@ -1,17 +1,12 @@
 import React, { useEffect } from 'react';
+import Login from './Login';
 
 const Home = () => {
-  useEffect(() => {
-    gapi.load('auth2', () => {
-      gapi.auth2.init({
-        client_id: cliendId,
-      });
-    });
-  }, []);
+  
 
   return (
     <div>
-      <Home />
+      <h1>Home</h1>
     </div>
   );
 };
