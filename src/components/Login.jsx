@@ -51,7 +51,7 @@ const Login = () => {
             appId={facebookAppId}
             onLogout={() => {
               // Logout logic here, for example:
-              dispatchEvent(logout());
+              dispatch(logout());
             }}
           />
         </div>
