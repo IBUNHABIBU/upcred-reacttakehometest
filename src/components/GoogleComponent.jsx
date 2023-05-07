@@ -10,7 +10,7 @@ const GoogleComponent = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const responseGoogle = (response) => {
-    dispatch(loginGoogle(response);
+    dispatch(loginGoogle(response));
     navigate('/products');
   };
 
