@@ -1,8 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import FacebookLogout from 'react-facebook-login';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { facebookAppId } from '../constants/constants';
+import { logout } from '../redux/actions/actions';
 
 const FacebookComponent = () => {
   const dispatch = useDispatch();

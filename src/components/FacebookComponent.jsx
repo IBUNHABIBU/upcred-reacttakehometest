@@ -25,7 +25,8 @@ const FacebookComponent = () => {
   };
 
   let fbContent;
-  if (user) {
+  if (user.isLogged) {
+    console.log('user', user.isLogged);
     fbContent = null;
   } else {
     fbContent = (
