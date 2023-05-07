@@ -5,7 +5,7 @@ import GoogleComponent from './GoogleComponent';
 import GoogleLogoutComponent from './GoogleLogoutComponent';
 import { cliendId } from '../constants/constants';
 
-const Home = () => {
+const Login = () => {
   useEffect(() => {
     gapi.load('auth2', () => {
       gapi.auth2.init({
@@ -23,4 +23,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Login;
