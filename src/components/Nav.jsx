@@ -7,6 +7,8 @@ const Nav = () => {
     console.log('logout');
   };
 
+  const user = true;
+
   return (
     <nav className="nav">
       <div className="nav__logo">
@@ -24,8 +26,11 @@ const Nav = () => {
             {item.name}
           </NavLink>
         ))
-      }
-        <button type="submit" className="btn" onClick={handleLogout}>Logout</button>
+      }<
+      { user ? (
+        <button type="submit" className="btn" onClick={handleLogout}>Logout</button> ):(
+        <NavLink to="/login" className="link">Login</NavLink>
+        )}
       </div>
     </nav>
   );
