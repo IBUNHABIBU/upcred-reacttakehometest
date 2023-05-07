@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FacebookLogin, FacebookLogout } from 'react-facebook-login';
+import FacebookLogin from 'react-facebook-login';
 import { useDispatch, useSelector } from 'react-redux';
 import { facebookAppId } from '../constants/constants';
 import { loginFacebook, logout } from '../redux/actions/actions';
@@ -20,9 +20,6 @@ const FacebookComponent = () => {
     console.log('clicked');
   };
 
-  const handleLogout = () => {
-    dispatch(logout());
-  };
 
   let fbContent;
   if (user.isLogged) {
@@ -37,10 +34,6 @@ const FacebookComponent = () => {
           fields="name,email,picture"
           onClick={componentClicked}
           callback={responseFacebook}
-        />
-        <FacebookLogout
-          appId={facebookAppId}
-          onLogout={handleLogout}
         />
       </div>
     );
