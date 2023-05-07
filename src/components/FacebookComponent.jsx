@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
 import { facebookAppId } from '../constants/constants';
 
@@ -8,8 +9,9 @@ const FacebookComponent = () => {
     isLoggedIn: false,
     name: '',
     email: '',
-
   });
+
+  const navigate = useNavigate();
 
   const responseFacebook = (response) => {
     console.log(response);
@@ -19,6 +21,7 @@ const FacebookComponent = () => {
       name: response.name,
       email: response.email,
     });
+    
   };
 
   const componentClicked = () => {
