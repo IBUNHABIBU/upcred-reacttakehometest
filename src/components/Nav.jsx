@@ -4,9 +4,8 @@ import { useSelector } from 'react-redux';
 import { list } from '../constants/constants';
 
 const Nav = () => {
-  const userState = useSelector((state) => state.user);
-  console.log('user', userState);
-  const user = false;
+  const user = useSelector((state) => state.user);
+  console.log('user nav', user);
   const handleLogout = () => {
     console.log('logout');
   };
