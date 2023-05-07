@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
 import { gapi } from 'gapi-script';
+import { FacebookLogout } from 'react-facebook-login';
 import FacebookComponent from './FacebookComponent';
 import GoogleComponent from './GoogleComponent';
-import { cliendId } from '../constants/constants';
+import { cliendId, facebookAppId } from '../constants/constants';
 import Form from './Form';
+import { logout } from '../redux/actions/actions';
+import { useDispatch } from 'react-redux';
 
 const Login = () => {
+  const dispatch = useDispatch();
   useEffect(() => {
     gapi.load('auth2', () => {
       gapi.auth2.init({
@@ -43,6 +47,13 @@ const Login = () => {
         <div className="service">
           <FacebookComponent />
           <GoogleComponent />
+          <FacebookLogout
+            appId={facebookAppId}
+            onLogout={() => {
+              // Logout logic here, for example:
+              dispatchEvent(logout());
+            }}
+          />
         </div>
       </div>
     </div>
