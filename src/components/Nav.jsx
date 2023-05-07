@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { list } from '../constants/constants';
 import { logout } from '../redux/actions/actions';
@@ -7,10 +7,11 @@ import { logout } from '../redux/actions/actions';
 const Nav = () => {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  console.log('user nav', user);
   const handleLogout = () => {
     dispatch(logout());
+    navigate('/');
   };
 
   return (
