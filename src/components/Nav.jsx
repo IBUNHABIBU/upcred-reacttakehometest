@@ -1,13 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { list } from '../constants/constants';
+import { logout } from '../redux/actions/actions';
 
 const Nav = () => {
   const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
   console.log('user nav', user);
   const handleLogout = () => {
-    console.log('logout');
+    dispatch(logout());
   };
 
   return (
@@ -28,7 +31,7 @@ const Nav = () => {
           </NavLink>
         ))
       }
-        { user ? (
+        { user.isLoggedIn ? (
           <button type="submit" className="btn" onClick={handleLogout}>Logout</button>) : (
             <NavLink to="/login" className="link">Login</NavLink>
         )}

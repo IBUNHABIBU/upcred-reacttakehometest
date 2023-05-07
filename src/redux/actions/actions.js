@@ -10,3 +10,6 @@ export const loginGoogle = (response) => ({
   payload: response,
 });
 
+export const logout = () => ({
+  type: actionTypes.LOGOUT,
+});
