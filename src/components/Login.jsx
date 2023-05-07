@@ -4,8 +4,10 @@ import FacebookComponent from './FacebookComponent';
 import GoogleComponent from './GoogleComponent';
 import { cliendId } from '../constants/constants';
 import Form from './Form';
+import { useDispatch } from 'react-redux';
 
 const Login = () => {
+  const dispatch = useDispatch();
   useEffect(() => {
     gapi.load('auth2', () => {
       gapi.auth2.init({
@@ -15,7 +17,7 @@ const Login = () => {
   }, []);
 
   const handleSubmit = (formData) => {
-    console.log(formData);
+    dispatch("data"));
   };
 
   return (
