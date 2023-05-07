@@ -4,6 +4,7 @@ import FacebookComponent from './FacebookComponent';
 import GoogleComponent from './GoogleComponent';
 import { cliendId } from '../constants/constants';
 import Form from './Form';
+import FbLogout from './FbLogout';
 
 const Login = () => {
   useEffect(() => {
@@ -43,6 +44,7 @@ const Login = () => {
         <div className="service">
           <FacebookComponent />
           <GoogleComponent />
+          <FbLogout />
         </div>
       </div>
     </div>
