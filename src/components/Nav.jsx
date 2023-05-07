@@ -31,7 +31,7 @@ const Nav = () => {
           </NavLink>
         ))
       }
-        { user.isLoggedIn ? (
+        { user.isLogged ? (
           <button type="submit" className="btn" onClick={handleLogout}>Logout</button>) : (
             <NavLink to="/login" className="link">Login</NavLink>
         )}
