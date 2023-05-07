@@ -26,7 +26,7 @@ const Nav = () => {
             {item.name}
           </NavLink>
         ))
-      }<
+      }
       { user ? (
         <button type="submit" className="btn" onClick={handleLogout}>Logout</button> ):(
         <NavLink to="/login" className="link">Login</NavLink>
