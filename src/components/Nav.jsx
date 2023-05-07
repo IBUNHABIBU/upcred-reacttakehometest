@@ -2,7 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { list } from '../constants/constants';
 
-const Nav = () => {(
+const Nav = () => {
+  const handleLogout = () => {
+    console.log('logout');
+  };
+  
+  return(
   <nav className="nav">
     <div className="nav__logo">
       <span />
