@@ -2,12 +2,15 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
 import { facebookAppId } from '../constants/constants';
+import { useDispatch } from 'react-redux';
 
 const FacebookComponent = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const responseFacebook = (response) => {
     console.log(response);
+    dispatch(setUser)
    
     navigate('/products');
   };
