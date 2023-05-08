@@ -7,7 +7,7 @@ const OtpComponent = () => {
 
   const generateOtp = () => {
     const otpValue = Math.floor(832 + Math.random() * 9000).toString();
-  }
+  };
   return (
     <div>OtpComponent</div>
   );
