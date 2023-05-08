@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const OtpComponent = () => {
-    const [number, setNumber] = useState('')
+  const [phoneNo, setPhoneNo] = useState('');
   return (
     <div>OtpComponent</div>
-  )
-}
+  );
+};
 
-export default OtpComponent
+export default OtpComponent;
