@@ -9,17 +9,15 @@ const OtpComponent = () => {
     const otpValue = Math.floor(832 + Math.random() * 9000).toString();
 
     const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+      
              method: 'sendMessage',
              sendTo: phoneNo,
              msg: `Your OTP is ${otpValue}`,
                 msgType: 'TEXT',
-                userId: '2000044622',
-                password: '123456',
+                userId: { gushupAppId },
+                password: {gushupApiKey},
                 auth_scheme: 'plain',
-             })
+             }
 
   };
   return (

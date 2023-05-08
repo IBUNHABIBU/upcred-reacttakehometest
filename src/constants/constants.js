@@ -3,6 +3,7 @@ export const clientSecret = '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';
 export const facebookAppId = '216650907742077';
 export const gushupAppId = '4000206800';
 export const gushupApiKey = 'e8b66wlv57x7n8juxhyfqqfvdg1rtity';
+
 export const list = [
   {
     id: 1,
