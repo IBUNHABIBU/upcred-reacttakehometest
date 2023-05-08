@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { gushupAppId, gushupApiKey } from '../constants';
+import axios from 'axios';
 
 const OtpComponent = () => {
   const [phoneNo, setPhoneNo] = useState('');
@@ -19,6 +20,12 @@ const OtpComponent = () => {
       password: { gushupApiKey },
       auth_scheme: 'plain',
     };
+
+    axios.post('https://api.gupshup.io/sm/api/v1/msg', requestOptions)
+      .then((response) => {
+        console.log(response);
+        setSentOtp(otpValue);
+      })
   };
   return (
     <div>OtpComponent</div>
