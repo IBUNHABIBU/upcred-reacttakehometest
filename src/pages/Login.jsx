@@ -11,12 +11,9 @@ import { setUser } from '../redux/actions/actions';
 
 const Login = () => {
   const dispatch = useDispatch();
-  const userLogin = useSelector((state) => state.user);
-  console.log(userLogin);
   const navigate = useNavigate();
   const [errors, setErrors] = useState('');
   const handleSubmit = (data) => {
-    console.log('Data', data);
     axios.post(`${urlBase}/sessions`, {
       user: {
         email: data.email,
@@ -27,12 +24,9 @@ const Login = () => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
         navigate('/products');
-        console.log(response.data);
       } else {
         setErrors(response.data.error);
       }
-    }).catch((error) => {
-      console.log(error.response.data.error);
     });
   };
 
