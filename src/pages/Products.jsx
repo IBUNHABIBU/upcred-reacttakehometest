@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
 import { addProducts } from '../redux/actions/actions';
 import { fakeStoreUrl } from '../constants';
-import axios from 'axios';
 
 const Products = () => {
   const products = useSelector((state) => state.products);
@@ -17,12 +17,7 @@ const Products = () => {
     fetchProducts();
   }, []);
 
-  const AddCart = (id) => {
-    console.log(id);
-    // const cart = products.filter((product) => product.id === id);
-    axios.post('http://localhost:3001/carts', { id })
-
-  };
+  
   return (
     <div className="products">
       {products.map((product) => (

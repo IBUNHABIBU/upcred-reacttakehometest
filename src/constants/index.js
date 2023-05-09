@@ -9,7 +9,6 @@ export const twillioAuthToken = 'a56ee4c27cc4e1e32ceadf55aba31c78';
 export const fakeStoreUrl = 'https://fakestoreapi.com';
 export const urlBase = 'https://car.darlive.cyou';
 
-
 export const list = [
   {
     id: 1,
