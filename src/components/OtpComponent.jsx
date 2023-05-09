@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { twillioAccountId, twillioBaseUrl } from '../constants';
+import { twillioAccountId, twillioAuthToken, twillioBaseUrl } from '../constants';
 
 const OtpComponent = () => {
   const [phoneNo, setPhoneNo] = useState('');
@@ -16,7 +16,18 @@ const OtpComponent = () => {
       Body: `Your OTP is ${otpValue}`,
     };
 
-    axios.post(`${twillioBaseUrl}/Accounts/${twillioAccountId}/Messages.json`, requestOptions)
+    axios.post(`${twillioBaseUrl}/Accounts/${twillioAccountId}/Messages.json`,
+     requestOptions,
+     {
+      auth: {
+        username: twillioAccountId,
+        password: twillioAuthToken,
+      },
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    }
+     )
       .then((response) => {
         console.log(response);
         setSentOtp(otpValue);
