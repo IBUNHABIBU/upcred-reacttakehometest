@@ -24,4 +24,7 @@ export const addProducts = (products) => ({
   payload: products,
 });
 
-export const addToCart
+export const addToCart = (cart) => ({
+  type: actionTypes.ADD_TO_CART,
+  payload: cart,
+});
