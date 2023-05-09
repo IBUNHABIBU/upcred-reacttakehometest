@@ -64,7 +64,10 @@ const Login = () => {
             action="Login"
           />
         </div>
-
+        <p>
+        New to this site?
+        <NavLink to="/signup" className="Link"> Register</NavLink>
+      </p>
         <hr className="hr" />
         <h6 className="h6">Or </h6>
         <div className="service">
