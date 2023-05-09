@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Form = ({ field, onSubmit, action, message, errors }) => {
+const Form = ({
+  field, onSubmit, action, message, errors,
+}) => {
   const [formData, setFormData] = useState({});
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -13,8 +15,8 @@ const Form = ({ field, onSubmit, action, message, errors }) => {
     onSubmit(formData);
   };
   return (
-    <div className='form'>
-       { message && <h6 className="msg">{message}</h6> }
+    <div className="form">
+      { message && <h6 className="msg">{message}</h6> }
       {errors.length ? (
         <div className="error">
           {(!Array.isArray(errors)) ? [(<h4 key={errors}>{errors}</h4>)]
