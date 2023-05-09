@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
+import { urlBase } from '../constants';
+import Form from '../components/Form';
 
 const Signup = () => {
   const userLogin = useSelector((state) => state.register);
@@ -34,6 +36,7 @@ const Signup = () => {
       </div>
       <Form
         errors={errors}
+        message={message}
         field={
           [
             {
