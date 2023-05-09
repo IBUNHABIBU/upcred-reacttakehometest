@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { gushupAppId, gushupApiKey } from '../constants';
+import { twillioAccountId, twillioBaseUrl } from '../constants';
 
 const OtpComponent = () => {
   const [phoneNo, setPhoneNo] = useState('');
@@ -11,17 +11,12 @@ const OtpComponent = () => {
     const otpValue = Math.floor(832 + Math.random() * 9000).toString();
 
     const requestOptions = {
-
-      method: 'sendMessage',
-      sendTo: { phoneNo },
-      msg: `Your OTP is ${otpValue}`,
-      msgType: 'TEXT',
-      userId: { gushupAppId },
-      password: { gushupApiKey },
-      auth_scheme: 'plain',
+      To: phoneNo,
+      From: '+255752443624',
+      Body: `Your OTP is ${otpValue}`,
     };
 
-    axios.post('https://api.gupshup.io/sm/api/v1/msg', requestOptions)
+    axios.post(`${twillioBaseUrl}/Accounts/${twillioAccountId}/Messages.json`, requestOptions)
       .then((response) => {
         console.log(response);
         setSentOtp(otpValue);
