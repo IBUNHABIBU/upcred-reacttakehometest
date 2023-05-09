@@ -49,11 +49,14 @@ const Products = () => {
       });
   };
 
+  const handleCheckout = () => {
+    navigate('/carts');
+  };
  
   return (
     <div className="checkout">
       <div className="checkout__header">
-        <button type="submit" className="btn" onClick={() => navigate(/carts)}>
+        <button type="submit" className="btn" onClick={handleCheckout}>
           Checkout (
           {cart.reduce((acc, item) => acc + item.quantity, 0)}
           )
