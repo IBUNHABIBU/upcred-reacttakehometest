@@ -21,10 +21,19 @@ const Products = () => {
   const AddCart = (productId, quantity) => {
     setCart([...cart, { productId, quantity }]);
   };
+
+  const handleCheckout = async () => {  
+    const response = await axios.post(`${fakeStoreUrl}/carts`, cart);
+    console.log(response);
+  };
+
   return (
     <div className="checkout">
       <div className="checkout__header">
-        <button type='submit'>Checkout {carts.quantity}</button>
+        <button type="submit" onSubmit={handleCheckout}>
+          Checkout
+          {cart.quantity}
+        </button>
       </div>
       <div className="products">
         {products.map((product) => (
