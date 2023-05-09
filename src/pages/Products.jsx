@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { addProducts, addToCart } from '../redux/actions/actions';
 import { fakeStoreUrl } from '../constants';
+import { useNavigate } from 'react-router-dom';
 
 const Products = () => {
   const products = useSelector((state) => state.products);
