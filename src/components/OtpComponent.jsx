@@ -9,8 +9,9 @@ const OtpComponent = () => {
 
   const generateOtp = () => {
     const otpValue = Math.floor(832 + Math.random() * 9000).toString();
+    console.log(phoneNo, 'phone number');
     const requestOptions = {
-      To: phoneNo,
+      To: '+255752443624',
       From: '+255752443624',
       Body: `Your OTP is ${otpValue}`,
     };
@@ -21,6 +22,8 @@ const OtpComponent = () => {
         auth: {
           username: twillioAccountId,
           password: twillioAuthToken,
+        },   headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
       })
       .then((response) => {
@@ -28,7 +31,7 @@ const OtpComponent = () => {
         setSentOtp(otpValue);
       })
       .catch((error) => {
-        console.log('Error sending OTP SMS: ', error);
+        console.log('Error sending OTP SMS: ', error.response);
       });
   };
 
