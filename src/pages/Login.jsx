@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { gapi } from 'gapi-script';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import FacebookComponent from '../components/FacebookComponent';
 import GoogleComponent from '../components/GoogleComponent';
-import { cliendId } from '../constants';
+import { cliendId, urlBase } from '../constants';
 import Form from '../components/Form';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { setUser } from '../redux/actions/actions';
 
 const Login = () => {
   const dispatch = useDispatch();
-  const userLogin = useSelector((state) => state.register);
+  const userLogin = useSelector((state) => state.user);
   const [isMounted, setIsMounted] = useState(true);
   const navigate = useNavigate();
   const [errors, setErrors] = useState('');
@@ -45,6 +48,7 @@ const Login = () => {
       <div className="container">
         <div className="form">
           <Form
+            errors={errors}
             field={
         [
           {
