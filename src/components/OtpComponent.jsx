@@ -17,21 +17,24 @@ const OtpComponent = () => {
     };
 
     axios.post(`${twillioBaseUrl}/Accounts/${twillioAccountId}/Messages.json`,
-     requestOptions,
-     {
-      auth: {
-        username: twillioAccountId,
-        password: twillioAuthToken,
-      },
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    }
-     )
+      requestOptions,
+      {
+        auth: {
+          username: twillioAccountId,
+          password: twillioAuthToken,
+        },
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      })
       .then((response) => {
         console.log(response);
         setSentOtp(otpValue);
+      })
+      .catch(error => {
+        console.log('Error sending OTP SMS: ', error);
       });
+      ;
   };
 
   const handlePhoneChange = (event) => {
