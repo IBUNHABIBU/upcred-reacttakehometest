@@ -72,11 +72,14 @@ Form.propTypes = {
   ).isRequired,
   onSubmit: PropTypes.func.isRequired,
   action: PropTypes.string.isRequired,
-  message: PropTypes.string,
+  message: PropTypes.string.isRequired,
   errors: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string),
-  ]),
+    PropTypes.shape({
+      field: PropTypes.string,
+      message: PropTypes.string,
+    }),
+  ]).isRequired,
 };
 
 export default Form;
