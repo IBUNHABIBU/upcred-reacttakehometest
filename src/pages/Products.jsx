@@ -17,7 +17,16 @@ const Products = () => {
     fetchProducts();
   }, []);
 
-  
+  const AddCart = (id) => {
+    console.log(id);
+    // const cart = products.filter((product) => product.id === id);
+    axios.post(`${fakeStoreUrl}/carts`, { id })
+      .then((res) => {
+        console.log(res);
+      }).catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className="products">
       {products.map((product) => (
