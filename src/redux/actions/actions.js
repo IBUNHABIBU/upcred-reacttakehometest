@@ -18,3 +18,8 @@ export const setUser = (response) => ({
   type: actionTypes.SET_USER,
   payload: response,
 });
+
+export const addProducts = (products) => ({
+  type: actionTypes.ADD_PRODUCTS,
+  payload: products,
+});
