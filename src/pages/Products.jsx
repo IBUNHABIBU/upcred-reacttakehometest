@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { addProducts, addToCart } from '../redux/actions/actions';
 import { fakeStoreUrl } from '../constants';
-import { useNavigate } from 'react-router-dom';
 
 const Products = () => {
   const products = useSelector((state) => state.products);
@@ -52,7 +52,7 @@ const Products = () => {
   const handleCheckout = () => {
     navigate('/carts');
   };
- 
+
   return (
     <div className="checkout">
       <div className="checkout__header">
