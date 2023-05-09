@@ -21,8 +21,8 @@ const userReducer = (state = initialState, { type, payload }) => {
     case actionTypes.SET_USER:
       return {
         ...state,
-        name: payload.name,
-        email: payload.email,
+        name: payload.details.name,
+        email: payload.details.email,
         isLogged: true,
       };
 

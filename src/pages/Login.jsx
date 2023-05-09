@@ -27,6 +27,7 @@ const Login = () => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
         navigate('/products');
+        console.log(response.data);
       } else {
         setErrors(response.data.error);
       }
