@@ -31,13 +31,8 @@ const Products = () => {
         }
         return item;
       });
-      return setCart(newCart);
-    }
-    return setCart([...cart, { productId, quantity: 1 }]);
-  };
-
-  const handleCheckout = () => {
-    console.log(cart);
+      setCart(newCart);
+    } else { setCart([...cart, { productId, quantity: 1 }]); }
     const body = {
       userId: 1,
       date: new Date(),
@@ -50,6 +45,10 @@ const Products = () => {
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  const handleCheckout = () => {
+    console.log(cart);
   };
 
   return (
