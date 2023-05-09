@@ -35,23 +35,27 @@ const Products = () => {
     }
     return setCart([...cart, { productId, quantity: 1 }]);
   };
-  console.log(cart);
+
   const handleCheckout = () => {
-    axios.post(`${fakeStoreUrl}/carts`, cart)
+    console.log(cart);
+    const body = {
+      userId: 1,
+      date: new Date(),
+      products: cart,
+    };
+    axios.post(`${fakeStoreUrl}/carts`, body)
       .then((response) => {
         console.log(response);
       })
       .catch((error) => {
         console.log(error);
-      }
-      );
-      
+      });
   };
 
   return (
     <div className="checkout">
       <div className="checkout__header">
-        <button type="submit" onSubmit={handleCheckout}>
+        <button type="submit" onClick={handleCheckout}>
           Checkout
         </button>
       </div>
