@@ -4,7 +4,7 @@ import { addProducts } from '../redux/actions/actions';
 
 const Products = () => {
   const products = useSelector((state) => state.products);
-  console.log(products);
+  
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchProducts = async () => {
@@ -15,7 +15,16 @@ const Products = () => {
     fetchProducts();
   }, []);
   return (
-    <div>Products</div>
+    <div className="products">
+      {products.map((product) => (
+        <div className="product" key={product.id}>
+          <img src={product.image} alt={product.title} />
+          <h3>{product.title}</h3>
+          <p>{product.description}</p>
+          <p>{product.price}</p>
+        </div>
+      }
+    </div>
   );
 };
 
