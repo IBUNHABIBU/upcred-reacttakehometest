@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { gapi } from 'gapi-script';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import FacebookComponent from '../components/FacebookComponent';
 import GoogleComponent from '../components/GoogleComponent';
 import { cliendId, urlBase } from '../constants';
 import Form from '../components/Form';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { setUser } from '../redux/actions/actions';
 
 const Login = () => {
