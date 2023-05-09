@@ -17,6 +17,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [errors, setErrors] = useState('');
   const handleSubmit = (data) => {
+    console.log('Data', data);
     axios.post(`${urlBase}/sessions`, {
       user: {
         email: data.email,
@@ -33,7 +34,7 @@ const Login = () => {
         }
       }
     }).catch((error) => {
-      console.log(error.message);
+      console.log(error.response.data.error);
     });
   };
 
