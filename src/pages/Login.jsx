@@ -24,14 +24,12 @@ const Login = () => {
       },
     },
     { withCredentials: true }).then((response) => {
-
-        console.log(response.data);
-        if (response.data.status === 'created') {
-          dispatch(setUser(response.data));
-          navigate('/models');
-        } else {
-          setErrors(response.data.error);
-        }
+      if (response.data.status === 'created') {
+        dispatch(setUser(response.data));
+        navigate('/models');
+      } else {
+        setErrors(response.data.error);
+      }
     }).catch((error) => {
       console.log(error.response.data.error);
     });
@@ -44,7 +42,6 @@ const Login = () => {
       });
     });
   }, []);
-
 
   return (
     <div className="login">
