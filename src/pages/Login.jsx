@@ -13,7 +13,6 @@ const Login = () => {
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.user);
   console.log(userLogin);
-  const [isMounted, setIsMounted] = useState(true);
   const navigate = useNavigate();
   const [errors, setErrors] = useState('');
   const handleSubmit = (data) => {
@@ -25,14 +24,14 @@ const Login = () => {
       },
     },
     { withCredentials: true }).then((response) => {
-      if (isMounted) {
+
+        console.log(response.data);
         if (response.data.status === 'created') {
           dispatch(setUser(response.data));
           navigate('/models');
         } else {
           setErrors(response.data.error);
         }
-      }
     }).catch((error) => {
       console.log(error.response.data.error);
     });
@@ -44,8 +43,8 @@ const Login = () => {
         client_id: cliendId,
       });
     });
-    setIsMounted(false);
   }, []);
+
 
   return (
     <div className="login">
