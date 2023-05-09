@@ -14,6 +14,10 @@ const Products = () => {
     };
     fetchProducts();
   }, []);
+
+  const AddCart = () => {
+    console.log('AddCart');
+  };
   return (
     <div className="products">
       {products.map((product) => (
@@ -22,7 +26,7 @@ const Products = () => {
           <h3 className="product__title">{product.title.slice(0, 30)}</h3>
           <p className="product__description">{product.description.slice(0, 120).concat('...')}</p>
           <p className="product__price">{product.price}</p>
-          <button type="submit" className="btn">AddToCart</button>
+          <button type="submit" className="btn" onClick ={AddCart}>AddToCart</button>
         </div>
       ))}
     </div>
