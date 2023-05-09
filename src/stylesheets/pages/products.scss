@@ -18,9 +18,8 @@
         @media (min-width: 1200px) {
             width: calc(33.33% - 20px);
         }
-    }
-
-    .product__image {
+    
+    &__image {
         margin-bottom: 20px;
         width: 100%;
 
@@ -28,14 +27,19 @@
             margin-bottom: 30px;
         }
     }
-
-    .product__title {
+    &__title {
         margin-bottom: 10px;
     }
 
-    .product__price {
+    &__price {
         margin-bottom: 20px;
     }
+
+   }
+
+    
+
+    
 
     .product__button {
         margin-bottom: 20px;
@@ -98,5 +102,5 @@
     .product__link-icon--left {
         margin-right: 5px;
     }
-    
+
 }
