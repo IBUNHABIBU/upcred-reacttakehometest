@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addProducts } from '../redux/actions/actions';
+import { fakeStoreUrl } from '../constants';
+import axios from 'axios';
 
 const Products = () => {
   const products = useSelector((state) => state.products);
@@ -8,7 +10,7 @@ const Products = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch('https://fakestoreapi.com/products');
+      const response = await fetch(`${fakeStoreUrl}/products`);
       const data = await response.json();
       dispatch(addProducts(data));
     };
@@ -17,6 +19,9 @@ const Products = () => {
 
   const AddCart = (id) => {
     console.log(id);
+    // const cart = products.filter((product) => product.id === id);
+    axios.post('http://localhost:3001/carts', { id })
+
   };
   return (
     <div className="products">
