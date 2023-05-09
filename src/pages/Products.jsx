@@ -55,7 +55,9 @@ const Products = () => {
     <div className="checkout">
       <div className="checkout__header">
         <button type="submit" onClick={handleCheckout}>
-          Checkout
+          Checkout (
+          {cart.reduce((acc, item) => acc + item.quantity, 0)}
+          )
         </button>
       </div>
       <div className="products">
@@ -67,7 +69,8 @@ const Products = () => {
             <p className="product__price">{product.price}</p>
             <button type="submit" className="btn" onClick={() => AddCart(product.id)}>
               AddToCart (
-
+              {cart.find((item) => item.productId === product.id)?.quantity || 0}
+              )
             </button>
           </div>
         ))}
