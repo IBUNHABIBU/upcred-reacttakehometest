@@ -63,13 +63,11 @@ const Signup = () => {
         Already Member?
         <Link to="/login" className="link"> Login</Link>
       </p>
-      <hr />
-      <hr className="hr" />
-        <h6 className="h6">Or </h6>
-        <div className="service">
-          <FacebookComponent />
-          <GoogleComponent />
-        </div>
+      <h6 className="h6">Or </h6>
+      <div className="service">
+        <FacebookComponent />
+        <GoogleComponent />
+      </div>
     </div>
   );
 };

@@ -32,6 +32,8 @@ const Login = () => {
           setErrors(response.data.error);
         }
       }
+    }).catch((error) => {
+      console.log(error.message);
     });
   };
 
@@ -50,6 +52,7 @@ const Login = () => {
         <div className="form">
           <Form
             errors={errors}
+            message={errors}
             field={
         [
           {
