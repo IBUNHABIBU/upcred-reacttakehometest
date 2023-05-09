@@ -36,9 +36,16 @@ const Products = () => {
     return setCart([...cart, { productId, quantity: 1 }]);
   };
   console.log(cart);
-  const handleCheckout = async () => {
-    const response = await axios.post(`${fakeStoreUrl}/carts`, cart);
-    console.log(response);
+  const handleCheckout = () => {
+    axios.post(`${fakeStoreUrl}/carts`, cart)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      }
+      );
+      
   };
 
   return (
