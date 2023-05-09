@@ -40,7 +40,6 @@ const Login = () => {
     setIsMounted(false);
   }, []);
 
-
   return (
     <div className="login">
       <div className="container">
