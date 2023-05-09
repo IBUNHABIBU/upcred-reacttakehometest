@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { gapi } from 'gapi-script';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import FacebookComponent from '../components/FacebookComponent';
 import GoogleComponent from '../components/GoogleComponent';
@@ -65,9 +65,9 @@ const Login = () => {
           />
         </div>
         <p>
-        New to this site?
-        <NavLink to="/signup" className="Link"> Register</NavLink>
-      </p>
+          New to this site?
+          <NavLink to="/signup" className="Link"> Register</NavLink>
+        </p>
         <hr className="hr" />
         <h6 className="h6">Or </h6>
         <div className="service">
