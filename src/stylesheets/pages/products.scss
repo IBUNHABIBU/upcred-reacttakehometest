@@ -39,66 +39,8 @@
     }
    }
 
-    
-
-    
-
     .product__button {
         margin-bottom: 20px;
-    }
-
-    .product__link {
-        color: $color-black;
-        display: block;
-        font-size: 14px;
-        font-weight: 700;
-        margin-bottom: 20px;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .product__link:hover {
-        text-decoration: underline;
-    }
-
-    .product__link--active {
-        color: $color-primary;
-    }
-
-    .product__link--active:hover {
-        text-decoration: none;
-    }
-
-    .product__link--disabled {
-        color: $color-gray;
-        pointer-events: none;
-    }
-
-    .product__link--disabled:hover {
-        text-decoration: none;
-    }
-
-    .product__link--disabled .product__link-text {
-        color: $color-gray;
-    }
-
-    .product__link-text {
-        display: inline-block;
-        margin-right: 5px;
-    }
-
-    .product__link-icon {
-        display: inline-block;
-        height: 10px;
-        width: 10px;
-    }
-
-    .product__link-icon--right {
-        margin-left: 5px;
-    }
-
-    .product__link-icon--left {
-        margin-right: 5px;
     }
 
 }
