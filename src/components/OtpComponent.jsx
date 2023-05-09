@@ -22,7 +22,6 @@ const OtpComponent = () => {
           username: twillioAccountId,
           password: twillioAuthToken,
         },
-       
       })
       .then((response) => {
         console.log(response);
