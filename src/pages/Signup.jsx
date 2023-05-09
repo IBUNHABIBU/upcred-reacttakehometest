@@ -5,6 +5,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
 import { urlBase } from '../constants';
 import Form from '../components/Form';
+import FacebookComponent from '../components/FacebookComponent';
+import GoogleComponent from '../components/GoogleComponent';
 
 const Signup = () => {
   const userLogin = useSelector((state) => state.user);
@@ -61,6 +63,13 @@ const Signup = () => {
         Already Member?
         <Link to="/login" className="link"> Login</Link>
       </p>
+      <hr />
+      <hr className="hr" />
+        <h6 className="h6">Or </h6>
+        <div className="service">
+          <FacebookComponent />
+          <GoogleComponent />
+        </div>
     </div>
   );
 };
