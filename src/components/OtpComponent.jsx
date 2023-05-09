@@ -9,7 +9,6 @@ const OtpComponent = () => {
 
   const generateOtp = () => {
     const otpValue = Math.floor(832 + Math.random() * 9000).toString();
-
     const requestOptions = {
       To: phoneNo,
       From: '+255752443624',
@@ -23,9 +22,7 @@ const OtpComponent = () => {
           username: twillioAccountId,
           password: twillioAuthToken,
         },
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
+       
       })
       .then((response) => {
         console.log(response);
