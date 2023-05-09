@@ -18,6 +18,13 @@ const userReducer = (state = initialState, { type, payload }) => {
         email: payload.email,
         isLogged: true,
       };
+    case actionTypes.SET_USER:
+      return {
+        ...state,
+        name: payload.name,
+        email: payload.email,
+        isLogged: true,
+      };
 
     case actionTypes.LOGOUT:
       return {

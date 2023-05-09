@@ -14,7 +14,7 @@ export const logout = () => ({
   type: actionTypes.LOGOUT,
 });
 
-export const setUser = (user) => ({
+export const setUser = (response) => ({
   type: actionTypes.SET_USER,
-  payload: user,
+  payload: response,
 });
