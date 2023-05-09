@@ -12,6 +12,7 @@ import { setUser } from '../redux/actions/actions';
 const Login = () => {
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.user);
+  console.log(userLogin);
   const [isMounted, setIsMounted] = useState(true);
   const navigate = useNavigate();
   const [errors, setErrors] = useState('');
