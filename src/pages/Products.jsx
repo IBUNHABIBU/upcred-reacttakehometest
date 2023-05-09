@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import { addProducts } from '../redux/actions/actions';
+import { addProducts, addToCart } from '../redux/actions/actions';
 import { fakeStoreUrl } from '../constants';
 
 const Products = () => {
   const products = useSelector((state) => state.products);
   const [cart, setCart] = useState([]);
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -40,7 +41,7 @@ const Products = () => {
     };
     axios.post(`${fakeStoreUrl}/carts`, body)
       .then((response) => {
-        dispatch(addCarts(response.data)));
+        dispatch(addToCart(response.data));
       })
       .catch((error) => {
         console.log(error);
@@ -51,7 +52,7 @@ const Products = () => {
   return (
     <div className="checkout">
       <div className="checkout__header">
-        <button type="submit" className="btn">
+        <button type="submit" className="btn" onClick={() => navigate(/carts)}>
           Checkout (
           {cart.reduce((acc, item) => acc + item.quantity, 0)}
           )
