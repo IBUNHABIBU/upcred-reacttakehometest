@@ -8,17 +8,38 @@ import Form from '../components/Form';
 
 const Login = () => {
   const dispatch = useDispatch();
+  const userLogin = useSelector((state) => state.register);
+  const [isMounted, setIsMounted] = useState(true);
+  const navigate = useNavigate();
+  const [errors, setErrors] = useState('');
+  const handleSubmit = (data) => {
+    axios.post(`${urlBase}/sessions`, {
+      user: {
+        email: data.email,
+        password: data.password,
+      },
+    },
+    { withCredentials: true }).then((response) => {
+      if (isMounted) {
+        if (response.data.status === 'created') {
+          dispatch(setUser(response.data));
+          navigate('/models');
+        } else {
+          setErrors(response.data.error);
+        }
+      }
+    });
+  };
+
   useEffect(() => {
     gapi.load('auth2', () => {
       gapi.auth2.init({
         client_id: cliendId,
       });
     });
+    setIsMounted(false);
   }, []);
 
-  const handleSubmit = (formData) => {
-    dispatch(formData);
-  };
 
   return (
     <div className="login">

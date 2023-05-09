@@ -1,13 +1,14 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
 import { urlBase } from '../constants';
 import Form from '../components/Form';
 
 const Signup = () => {
-  const userLogin = useSelector((state) => state.register);
+  const userLogin = useSelector((state) => state.user);
+  console.log(userLogin, 'userLogin');
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
