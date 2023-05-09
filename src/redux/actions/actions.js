@@ -23,3 +23,5 @@ export const addProducts = (products) => ({
   type: actionTypes.ADD_PRODUCTS,
   payload: products,
 });
+
+export const addToCart

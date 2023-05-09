@@ -47,14 +47,11 @@ const Products = () => {
       });
   };
 
-  const handleCheckout = () => {
-    console.log(cart);
-  };
-
+ 
   return (
     <div className="checkout">
       <div className="checkout__header">
-        <button type="submit" onClick={handleCheckout} className="btn">
+        <button type="submit" className="btn">
           Checkout (
           {cart.reduce((acc, item) => acc + item.quantity, 0)}
           )
