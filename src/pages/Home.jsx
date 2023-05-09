@@ -1,5 +1,5 @@
 import React from 'react';
-import OtpComponent from './OtpComponent';
+import OtpComponent from '../components/OtpComponent';
 
 const Home = () => (
   <div>
