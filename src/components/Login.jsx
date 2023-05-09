@@ -3,7 +3,7 @@ import { gapi } from 'gapi-script';
 import { useDispatch } from 'react-redux';
 import FacebookComponent from './FacebookComponent';
 import GoogleComponent from './GoogleComponent';
-import { cliendId } from '../constants/constants';
+import { cliendId } from '../constants';
 import Form from './Form';
 
 const Login = () => {

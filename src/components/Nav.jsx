@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { list } from '../constants/constants';
+import { list } from '../constants';
 import { logout } from '../redux/actions/actions';
 
 const Nav = () => {

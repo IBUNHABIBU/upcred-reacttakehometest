@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
 import { useDispatch, useSelector } from 'react-redux';
-import { facebookAppId } from '../constants/constants';
+import { facebookAppId } from '../constants';
 import { loginFacebook } from '../redux/actions/actions';
 
 const FacebookComponent = () => {

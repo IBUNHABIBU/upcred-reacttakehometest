@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { gushupAppId, gushupApiKey } from '../constants';
 import axios from 'axios';
+import { gushupAppId, gushupApiKey } from '../constants';
 
 const OtpComponent = () => {
   const [phoneNo, setPhoneNo] = useState('');
@@ -13,7 +13,7 @@ const OtpComponent = () => {
     const requestOptions = {
 
       method: 'sendMessage',
-      sendTo: phoneNo,
+      sendTo: { phoneNo },
       msg: `Your OTP is ${otpValue}`,
       msgType: 'TEXT',
       userId: { gushupAppId },
@@ -25,10 +25,41 @@ const OtpComponent = () => {
       .then((response) => {
         console.log(response);
         setSentOtp(otpValue);
-      })
+      });
   };
+
+  const handlePhoneChange = (event) => {
+    setPhoneNo(event.target.value);
+  };
+
+  const handleOtpChange = (event) => {
+    setOtp(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    generateOtp();
+  };
+
   return (
-    <div>OtpComponent</div>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="phone">
+          Enter Phone Number:
+          <input type="text" value={phoneNo} onChange={handlePhoneChange} />
+        </label>
+        <br />
+        <button type="submit">Send OTP</button>
+      </form>
+      <form>
+        <label htmlFor="otp">
+          Enter OTP:
+          <input type="text" value={otp} onChange={handleOtpChange} />
+        </label>
+        <br />
+        {otp === sentOtp && <div>OTP Verified!</div>}
+      </form>
+    </div>
   );
 };
 
