@@ -13,3 +13,8 @@ export const loginGoogle = (response) => ({
 export const logout = () => ({
   type: actionTypes.LOGOUT,
 });
+
+export const setUser = (user) => ({
+  type: actionTypes.SET_USER,
+  payload: user,
+});
