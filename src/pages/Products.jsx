@@ -18,11 +18,25 @@ const Products = () => {
     fetchProducts();
   }, []);
 
-  const AddCart = (productId, quantity) => {
-    setCart([...cart, { productId, quantity }]);
-  };
+  const AddCart = (productId) => {
+    const productInTheCart = cart.find((item) => item.productId === productId);
 
-  const handleCheckout = async () => {  
+    if (productInTheCart) {
+      const newCart = cart.map((item) => {
+        if (item.productId === productId) {
+          return {
+            ...item,
+            quantity: item.quantity + 1,
+          };
+        }
+        return item;
+      });
+      return setCart(newCart);
+    }
+    return setCart([...cart, { productId, quantity: 1 }]);
+  };
+  console.log(cart);
+  const handleCheckout = async () => {
     const response = await axios.post(`${fakeStoreUrl}/carts`, cart);
     console.log(response);
   };
@@ -32,7 +46,6 @@ const Products = () => {
       <div className="checkout__header">
         <button type="submit" onSubmit={handleCheckout}>
           Checkout
-          {cart.quantity}
         </button>
       </div>
       <div className="products">
@@ -43,9 +56,7 @@ const Products = () => {
             <p className="product__description">{product.description.slice(0, 120).concat('...')}</p>
             <p className="product__price">{product.price}</p>
             <button type="submit" className="btn" onClick={() => AddCart(product.id)}>
-              AddToCart (
-              {cart.quantity}
-              )
+              AddToCart
             </button>
           </div>
         ))}
