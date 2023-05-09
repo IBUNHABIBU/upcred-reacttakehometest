@@ -7,7 +7,7 @@ const Carts = () => {
     <div>
       <h1>Carts</h1>
       {
-      cart.map((item) => (
+      cart && cart.length > 0 && cart.map((item) => (
         <div key={item.id}>
           <h3>{item.title}</h3>
           <p>{item.quantity}</p>
