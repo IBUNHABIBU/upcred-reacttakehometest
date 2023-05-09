@@ -2,13 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 20px;
-    width: 100%;
 
     .product {
         width: 30%;
+        margin-bottom: 2rem;
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        height: 30%;
 
         @media (min-width: 768px) {
             width: calc(50% - 20px);
@@ -20,7 +20,7 @@
     
     &__image {
         margin-bottom: 20px;
-        width: 100%;
+        width: 50%;
 
         @media (min-width: 768px) {
             margin-bottom: 30px;
