@@ -31,10 +31,9 @@ const OtpComponent = () => {
         console.log(response);
         setSentOtp(otpValue);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log('Error sending OTP SMS: ', error);
       });
-      ;
   };
 
   const handlePhoneChange = (event) => {
