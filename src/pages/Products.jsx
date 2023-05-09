@@ -56,7 +56,8 @@ const Products = () => {
             <p className="product__description">{product.description.slice(0, 120).concat('...')}</p>
             <p className="product__price">{product.price}</p>
             <button type="submit" className="btn" onClick={() => AddCart(product.id)}>
-              AddToCart
+              AddToCart (
+
             </button>
           </div>
         ))}
