@@ -29,7 +29,6 @@ const Products = () => {
 
   // console.log(isLogged);
   if (!isLoggedIn) {
-    console.log('not logged', isLogged);
     return (
       <>
         <Navigate to="/login" />
