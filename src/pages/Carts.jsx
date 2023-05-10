@@ -23,17 +23,16 @@ const Carts = () => {
         cartItems.map(({
           id, image, title, quantity,
         }) => (
-          <table className="cart-table">
+          <table className="cart-table" key={id}>
             <tbody>
-              <tr key={id} className="cart-row">
-                <td className='cart-item'>
-                <img src={image} alt={title} className="cart-item__image" />
-                <p className="cart-item__title">{title}</p>
+              <tr className="cart-row">
+                <td className="cart-item">
+                  <img src={image} alt={title} className="cart-item__image" />
+                  <p className="cart-item__title">{title}</p>
                 </td>
                 <td className="cart-item__quantity">
-                  
-                    {quantity}
-                
+                  {quantity}
+
                 </td>
               </tr>
             </tbody>
