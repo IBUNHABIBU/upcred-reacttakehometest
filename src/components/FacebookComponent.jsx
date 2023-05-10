@@ -1,12 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { facebookAppId } from '../constants';
 import { loginFacebook } from '../redux/actions/actions';
 
 const FacebookComponent = () => {
-  // const user = useSelector((state) => state.user);
   const isLogged = localStorage.getItem('isLogged');
   const navigate = useNavigate();
   const dispatch = useDispatch();
