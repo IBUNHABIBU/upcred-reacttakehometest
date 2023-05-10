@@ -16,8 +16,6 @@ const Login = () => {
   localStorage.setItem('isLogged', user.isLogged);
   const [errors, setErrors] = useState('');
 
- 
-
   const handleSubmit = (data) => {
     axios.post(`${urlBase}/sessions`, {
       user: {
@@ -34,7 +32,6 @@ const Login = () => {
       }
     });
   };
-
 
   return (
     <div className="login">

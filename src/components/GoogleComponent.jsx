@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import { useDispatch } from 'react-redux';
+import { gapi } from 'gapi-script';
 import { cliendId } from '../constants';
 import { loginGoogle } from '../redux/actions/actions';
-import { gapi } from 'gapi-script';
 
 const GoogleComponent = () => {
   const dispatch = useDispatch();
