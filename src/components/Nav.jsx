@@ -6,6 +6,7 @@ import { logout } from '../redux/actions/actions';
 
 const Nav = () => {
   const user = useSelector((state) => state.user);
+  const isLogged = localStorage.getItem('isLogged');
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -36,7 +37,7 @@ const Nav = () => {
           </NavLink>
         ))
       }
-        { user.isLogged ? (
+        { isLogged ? (
           <button type="submit" className="btn" onClick={handleLogout}>Logout</button>) : (
             <NavLink to="/login" className="link">Login</NavLink>
         )}
