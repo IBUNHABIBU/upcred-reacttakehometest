@@ -7,6 +7,7 @@ import { fakeStoreUrl } from '../constants';
 
 const Products = () => {
   const products = useSelector((state) => state.products);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const isLogged = localStorage.getItem('isLogged') || false;
   const [cart, setCart] = useState([]);
   const navigate = useNavigate();
@@ -20,13 +21,8 @@ const Products = () => {
     };
 
     fetchProducts();
-    if (!isLogged) {
-      setIsLoggedIn(false);
-    } else {
-      setIsLoggedIn(true);
-    }
+    setIsLoggedIn(Boolean(isLogged));
   }, []);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   if (!isLoggedIn) {
     return (
