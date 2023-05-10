@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import Signup from './Signup';
 
 const Home = () => {
-  if (user.isLogged) {
+  if (isLogged) {
     return (
       <>
         <Navigate to="/products" />
