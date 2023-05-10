@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { gapi } from 'gapi-script';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import FacebookComponent from '../components/FacebookComponent';
 import GoogleComponent from '../components/GoogleComponent';
-import { cliendId, urlBase } from '../constants';
+import { urlBase } from '../constants';
 import Form from '../components/Form';
 import { setUser } from '../redux/actions/actions';
 
