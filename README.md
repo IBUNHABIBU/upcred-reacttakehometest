@@ -13,8 +13,8 @@
     </p>
   </a>
 
-  <h2 align="center"> FINAL CAPSTONE PROJECT </h2>
-  <h3 align="center"> This project is final project to design a full stack application </h3>
+  <h2 align="center"> REACT SHOPPING CART </h2>
+  <h3 align="center"> A take-home exercise to create shopping cart </h3>
 
   <p align="center">
     <a href="https://github.com/IBUNHABIBU/final-capstone/issues">Report Bug</a>
