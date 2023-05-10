@@ -46,15 +46,15 @@ A web application with signup with Google, Facebook, mobile with OTP, and email 
 ### Features
 
 - User authentication signup/login/logout with
-    -[x] Google
+    - [x] Google
 
-    -[x] Facebook
+    - [x] Facebook
 
-    -[x] email and password
+    - [x] email and password
 
-    -[] Mobile with OTP
+    - [] Mobile with OTP
 
-    -[] Email with OTP
+    - [] Email with OTP
 
 - [x] Error validation for Signup form and login form
 
