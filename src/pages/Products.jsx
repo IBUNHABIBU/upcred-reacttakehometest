@@ -11,9 +11,9 @@ const Products = () => {
 
   if (!user.isLogged) {
     return (
-      <div>
+      <>
         <Navigate to="/login" />
-      </div>
+      </>
     );
   }
 

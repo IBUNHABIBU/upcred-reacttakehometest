@@ -8,6 +8,12 @@ const Carts = () => {
   const cartItems = products.filter((product) => {
     const cartItem = cart && cart.find((item) => item.productId === product.id);
     return cartItem;
+  }).map((product) => {
+    const cartItem = cart && cart.find((item) => item.productId === product.id);
+    return {
+      ...product,
+      quantity: cartItem.quantity,
+    };
   });
 
   return (

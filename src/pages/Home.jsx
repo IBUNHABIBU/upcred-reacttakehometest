@@ -6,7 +6,11 @@ import Signup from './Signup';
 const Home = () => {
   const user = useSelector((state) => state.user);
   if (user.isLogged) {
-    <Navigate to="/products" />;
+    return (
+      <>
+        <Navigate to="/products" />
+      </>
+    );
   }
   return (
     <div>
