@@ -1,16 +1,18 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { fakeStoreUrl } from '../constants';
 
 const Carts = () => {
   const cart = useSelector((state) => state.carts.products);
   const products = useSelector((state) => state.products);
-  console.log(products);
-  
+  console.log(products, cart);
+
+  const cartItems = products.filter((product) => cart.productId === product.id);
+  console.log(cartItems);
+
   return (
     <div>
-   hello
+      hello
     </div>
   );
 };
