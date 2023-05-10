@@ -112,11 +112,6 @@ Enjoy playing it.
 | `npm run test` | Run all test suites |
 | `npm run lint -- --fix` | Fix all lint errors automatically |
 
-<!-- ### How to play -->
-
-<!-- CONTACT -->
-
-
 ## Live Demo
 [Live Demo ](salum-microverse-final-capstone.netlify.app)
 
