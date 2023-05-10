@@ -45,27 +45,15 @@ A web application with signup with Google, Facebook, mobile with OTP, and email 
 
 ### Features
 
-- User authentication
+- User authentication signup/login/logout with
     -[x] Google
     -[x] Facebook
+    -[x] email and password
     -[] Mobile with OTP
     -[] Email with OTP
 - [x] Add products to cart
 - [] Remove products from cart
 - [x] Checkout page
-
-## Version2 features
- - Google, facebook, Github and OTP authentication with sms and email
- - Edit and delete cars
- - Mobile version
- - Improved UI
- - Admin panel with the ability to add another admin
- - Admin can approve or reject appointments
- - Dashboard to show the number of cars, appointments, users, and total income earned
- - Users can see the status of appointments and can pay online
- - Users can see the history of appointments
- - Users can see the history of payment
- - Search cars by name, model, year, price, color
     
 <!-- BUILD WITH -->
 ## Built With
@@ -75,16 +63,13 @@ This project was built using the following technologies:
 
 -React
   -ES6
-  -Higher-order component to make the sidebar nav with the help of React Router v6
+  -Higher-order component to make the nav
+  -React router v6
   -DRY principle
-    -Reusable Form component used all over the application, such as login, signup, create   car,   and create appointment
-    -Reusable Popup modal component used all over the application
+    -Reusable Form component used all over the application, such as login, signup
 -Redux
--Rails API
--Bootstrap
 -SASS
   -BEM
-
 
 ### Requirement
 
