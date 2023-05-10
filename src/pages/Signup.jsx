@@ -9,8 +9,6 @@ import FacebookComponent from '../components/FacebookComponent';
 import GoogleComponent from '../components/GoogleComponent';
 
 const Signup = () => {
-  const userLogin = useSelector((state) => state.user);
-  console.log(userLogin, 'userLogin');
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');

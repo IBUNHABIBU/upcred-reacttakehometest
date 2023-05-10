@@ -26,11 +26,10 @@ const OtpComponent = () => {
         },
       })
       .then((response) => {
-        if(response.status === 200) {
-        setSentOtp(otpValue);
+        if (response.status === 200) {
+          setSentOtp(otpValue);
         }
-      })
-    
+      });
   };
 
   const handlePhoneChange = (event) => {
