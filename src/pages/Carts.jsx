@@ -6,17 +6,18 @@ const Carts = () => {
   const products = useSelector((state) => state.products);
 
   const cartItems = products.filter((product) => {
-    let cartItem = cart.find((item) => item.productId === product.id);
+    const cartItem = cart.find((item) => item.productId === product.id);
     return cartItem;
   });
 
   return (
     <div>
       {
-        cartItems.map(({id, image, title }) => (
+        cartItems.map(({ id, image, title, quantity }) => (
           <div key={id}>
             <img src={image} alt={title} />
             <p>{title}</p>
+            <p>{quantity}</p>
           </div>
         ))
       }
