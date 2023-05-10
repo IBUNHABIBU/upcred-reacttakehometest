@@ -1,0 +1,33 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.products .product {
+  width: 24rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  height: 30%;
+}
+.products .product__image {
+  margin-bottom: 1rem;
+  width: 300px;
+  height: 300px;
+}
+.products .product__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.products .product__price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.products .product__description {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+.products .product__button {
+  margin-bottom: 20px;
+}/*# sourceMappingURL=products.css.map */

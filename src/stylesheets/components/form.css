@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.form .msg {
+  background-color: #d4edda;
+  padding: 1rem;
+}
+.form .error {
+  background-color: #f8d7da;
+  width: 500px;
+  padding: 1rem;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.form form label {
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+}
+.form form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+  width: 100%;
+}/*# sourceMappingURL=form.css.map */
