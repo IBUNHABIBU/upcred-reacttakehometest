@@ -32,7 +32,6 @@ const Carts = () => {
                 </td>
                 <td className="cart-item__quantity">
                   {quantity}
-
                 </td>
               </tr>
             </tbody>
