@@ -4,7 +4,6 @@ import { Navigate } from 'react-router-dom';
 import Signup from './Signup';
 
 const Home = () => {
-  const user = useSelector((state) => state.user);
   if (user.isLogged) {
     return (
       <>
