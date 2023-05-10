@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { addProducts, addToCart } from '../redux/actions/actions';
 import { fakeStoreUrl } from '../constants';
 
 const Products = () => {
   const products = useSelector((state) => state.products);
+  const user = useSelector((state) => state.user);
+
+  if (!user.isLogged) {
+    return (
+      <div>
+        <Navigate to="/login" />
+      </div>
+    );
+  }
+
   const [cart, setCart] = useState([]);
   const navigate = useNavigate();
 
