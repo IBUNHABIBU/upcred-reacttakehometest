@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
 import { useDispatch } from 'react-redux';
+import { facebookAppId } from '../constants';
 import { loginFacebook } from '../redux/actions/actions';
 
 const FacebookComponent = () => {
@@ -22,7 +23,7 @@ const FacebookComponent = () => {
     fbContent = (
       <div>
         <FacebookLogin
-          appId={process.env.REACT_APP_FACEBOOK_APP_ID}
+          appId={facebookAppId}
           autoLoad
           fields="name,email,picture"
           callback={responseFacebook}
