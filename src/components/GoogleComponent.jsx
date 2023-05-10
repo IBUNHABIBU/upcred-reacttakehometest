@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import { useDispatch } from 'react-redux';
 import { gapi } from 'gapi-script';
+import { cliendId } from '../constants';
 import { loginGoogle } from '../redux/actions/actions';
 
 const GoogleComponent = () => {
@@ -12,7 +13,7 @@ const GoogleComponent = () => {
   useEffect(() => {
     gapi.load('auth2', () => {
       gapi.auth2.init({
-        client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+        client_id: cliendId,
       });
     });
   }, []);
@@ -25,7 +26,7 @@ const GoogleComponent = () => {
   return (
     <div>
       <GoogleLogin
-        clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+        clientId={cliendId}
         buttonText="Login"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
