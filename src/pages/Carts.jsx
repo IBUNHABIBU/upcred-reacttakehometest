@@ -19,27 +19,35 @@ const Carts = () => {
   return (
     <div className="cart-items">
       <h3>Cart Items</h3>
-      {
+      <table className="cart-table">
+        <thead>
+          <tr>
+            <th>Product image</th>
+            <th>Title</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        {
         cartItems.map(({
           id, image, title, quantity,
         }) => (
-          <table className="cart-table" key={id}>
-            <tbody>
-              <tr className="cart-row">
-                <td className="cart-item">
-                  <img src={image} alt={title} className="cart-item__image" />
-                </td>
-                <td>
-                  {title}
-                </td>
-                <td className="cart-item__quantity">
-                  {quantity}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+
+          <tbody key={id}>
+            <tr className="cart-row">
+              <td className="cart-item">
+                <img src={image} alt={title} className="cart-item__image" />
+              </td>
+              <td>
+                {title}
+              </td>
+              <td className="cart-item__quantity">
+                {quantity}
+              </td>
+            </tr>
+          </tbody>
         ))
       }
+      </table>
     </div>
   );
 };
