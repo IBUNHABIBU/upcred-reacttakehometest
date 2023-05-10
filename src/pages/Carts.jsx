@@ -6,7 +6,7 @@ const Carts = () => {
   const products = useSelector((state) => state.products);
 
   const cartItems = products.filter((product) => {
-    const cartItem = cart.find((item) => item.productId === product.id);
+    const cartItem = cart && cart.find((item) => item.productId === product.id);
     return cartItem;
   });
 
@@ -14,12 +14,13 @@ const Carts = () => {
     <div>
       {
         cartItems.map(({
-          id, image, title, quantity,
+          id, image, title,
         }) => (
           <div key={id}>
+            <h3>Cart Items</h3>
             <img src={image} alt={title} />
             <p>{title}</p>
-            <p>{quantity}</p>
+            <p>quantity</p>
           </div>
         ))
       }

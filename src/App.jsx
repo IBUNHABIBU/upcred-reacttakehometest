@@ -7,6 +7,7 @@ import Products from './pages/Products';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Carts from './pages/Carts';
+import Admin from './pages/Admin';
 
 const App = () => {
   const HomeComponent = layout(Home);
@@ -14,6 +15,7 @@ const App = () => {
   const ProductComponent = layout(Products);
   const SignUpComponent = layout(SignUp);
   const CartsComponent = layout(Carts);
+  const AdminComponent = layout(Admin);
 
   const router = createBrowserRouter([
     { path: '/', element: <HomeComponent /> },
@@ -21,6 +23,7 @@ const App = () => {
     { path: '/products', element: <ProductComponent /> },
     { path: '/signup', element: <SignUpComponent /> },
     { path: '/carts', element: <CartsComponent /> },
+    { path: '/admin', element: <AdminComponent /> },
   ]);
   return (
     <div className="app">
