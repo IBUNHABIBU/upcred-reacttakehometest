@@ -20,7 +20,6 @@ const Products = () => {
     };
     const isLogged = localStorage.getItem('isLogged');
     if (!isLogged) {
-      console.log('not logged', isLogged);
       setIsLoggedIn(false);
     } else {
       setIsLoggedIn(true);
@@ -29,7 +28,7 @@ const Products = () => {
   });
 
   // console.log(isLogged);
-  if (!isLogged) {
+  if (!isLoggedIn) {
     console.log('not logged', isLogged);
     return (
       <>
