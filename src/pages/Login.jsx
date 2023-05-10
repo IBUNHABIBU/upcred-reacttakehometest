@@ -13,6 +13,15 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [errors, setErrors] = useState('');
+  
+  useEffect(() => {
+    gapi.load('auth2', () => {
+      gapi.auth2.init({
+        client_id: cliendId,
+      });
+    });
+  }, []);
+
   const handleSubmit = (data) => {
     axios.post(`${urlBase}/sessions`, {
       user: {
@@ -30,13 +39,6 @@ const Login = () => {
     });
   };
 
-  useEffect(() => {
-    gapi.load('auth2', () => {
-      gapi.auth2.init({
-        client_id: cliendId,
-      });
-    });
-  }, []);
 
   return (
     <div className="login">
