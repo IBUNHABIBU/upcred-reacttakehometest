@@ -63,7 +63,7 @@ const Products = () => {
   return (
     <div className="checkout">
       <div className="checkout__header">
-        <button type="submit" className="btn" onClick={handleCheckout}>
+        <button type="submit" className="btn btn--checkout" onClick={handleCheckout}>
           Checkout (
           {cart.reduce((acc, item) => acc + item.quantity, 0)}
           )
