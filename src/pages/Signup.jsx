@@ -35,7 +35,7 @@ const Signup = () => {
   return (
     <div className="signup">
       <div className="signup__header">
-        <h1>Register</h1>
+        <h6>Register</h6>
       </div>
       <Form
         errors={errors}
