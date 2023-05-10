@@ -41,8 +41,6 @@
 
 A web application with signup with Google, Facebook, mobile with OTP, and email with OTP. Now once the login is done, users can go ahead and add different products to their carts, and then they can be moved to the checkout page
 
-[Link of the backend api](https://github.com/IBUNHABIBU/car-rent-booking-api)
-
 ### Features
 
 - User authentication signup/login/logout with
@@ -122,7 +120,7 @@ Enjoy playing it.
 | `npm run lint -- --fix` | Fix all lint errors automatically |
 
 ## Live Demo
-[Live Demo ](salum-microverse-upcred-reacttakehometest.netlify.app)
+[Live Demo ](https://ibunhabibucredchallenge.netlify.app/)
 
 
 ## Authors
