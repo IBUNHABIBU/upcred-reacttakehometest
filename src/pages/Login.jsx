@@ -13,7 +13,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [errors, setErrors] = useState('');
-  
+
   useEffect(() => {
     gapi.load('auth2', () => {
       gapi.auth2.init({
@@ -38,7 +38,6 @@ const Login = () => {
       }
     });
   };
-
 
   return (
     <div className="login">
