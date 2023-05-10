@@ -83,7 +83,7 @@ To run this locally, clone the repository, navigate to the project's containing 
 #### Follow these commands step by step:-
 
 `
- git@github.com:IBUNHABIBU/final-capstone.git
+ git@github.com:IBUNHABIBU/upcred-reacttakehometest.git
 `
 
 `
@@ -120,24 +120,6 @@ Enjoy playing it.
 ## Live Demo
 [Live Demo ](salum-microverse-final-capstone.netlify.app)
 
-## Challenges faced
-
-It was hard to implement image upload due to the following reasons
-
-* in the front end these methods solved the issues
-    
-    I used formData
-    I used withCredentials: true
-    in the formData.append("modelname[attribue]", data)
-
-* setMessage was not working due to history.push(/models)
-
-    after removing it it worked
-
- After deploying my api to linode server my front end was not showingup
- after inspecting the element I found the following error
- `r.js:187 Mixed Content: The page at 'https://salum-microverse-final-capstone.netlify.app/' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://car.darlive.cyou/logged_in'. This request has been blocked; the content must be served over HTTPS.`
- the solution is to use ssl certificate
 
 ## Authors
 
