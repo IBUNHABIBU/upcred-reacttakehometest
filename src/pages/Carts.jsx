@@ -4,10 +4,11 @@ import { useSelector } from 'react-redux';
 const Carts = () => {
   const cart = useSelector((state) => state.carts.products);
   const products = useSelector((state) => state.products);
-  console.log(products, cart);
 
-  const cartItems = products.filter((product) => cart.productId === product.id);
-  console.log(cartItems);
+  const cartItems = products.filter((product) => {
+    const cartItem = cart.find((item) => item.productId === product.id);
+    return cartItem;
+  });
 
   return (
     <div>
