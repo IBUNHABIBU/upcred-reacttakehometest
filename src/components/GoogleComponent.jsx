@@ -19,6 +19,7 @@ const GoogleComponent = () => {
   }, []);
   const responseGoogle = (response) => {
     dispatch(loginGoogle(response));
+    localStorage.setItem('isLogged', true);
     navigate('/products');
   };
 

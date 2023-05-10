@@ -13,6 +13,7 @@ const FacebookComponent = () => {
 
   const responseFacebook = (response) => {
     dispatch(loginFacebook(response));
+    localStorage.setItem('isLogged', true);
     navigate('/products');
   };
 
