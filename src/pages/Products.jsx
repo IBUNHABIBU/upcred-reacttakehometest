@@ -18,13 +18,14 @@ const Products = () => {
       const data = await response.json();
       dispatch(addProducts(data));
     };
+    
+    fetchProducts();
     const isLogged = localStorage.getItem('isLogged');
     if (!isLogged) {
       setIsLoggedIn(false);
     } else {
       setIsLoggedIn(true);
     }
-    fetchProducts();
   });
 
   if (!isLoggedIn) {
