@@ -13,7 +13,9 @@ const Carts = () => {
   return (
     <div>
       {
-        cartItems.map(({ id, image, title, quantity }) => (
+        cartItems.map(({
+          id, image, title, quantity,
+        }) => (
           <div key={id}>
             <img src={image} alt={title} />
             <p>{title}</p>
