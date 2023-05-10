@@ -6,7 +6,7 @@
 <br />
 
 <p align="center">
-  <a href="git@github.com:IBUNHABIBU/final-capstone.git">
+  <a href="git@github.com:IBUNHABIBU/upcred-reacttakehometest.git">
     <p align="center">
       <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="React" width="100" height="100">
       <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/redux/redux.png" alt="Redux" width="100" height="100">
@@ -87,7 +87,7 @@ To run this locally, clone the repository, navigate to the project's containing 
 `
 
 `
-cd final-capstone
+cd upcred-reacttakehometest
 `
 
  `$npm install `
@@ -113,7 +113,7 @@ Enjoy playing it.
 | `npm run lint -- --fix` | Fix all lint errors automatically |
 
 ## Live Demo
-[Live Demo ](salum-microverse-final-capstone.netlify.app)
+[Live Demo ](salum-microverse-upcred-reacttakehometest.netlify.app)
 
 
 ## Authors
@@ -137,14 +137,14 @@ all my standup team for their help.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/final-capstone.svg?style=flat-square
-[contributors-url]: https://github.com/IBUNHABIBU/final-capstone/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/IBUNHABIBU/final-capstone.svg?style=flat-square
-[forks-url]: https://github.com/IBUNHABIBU/final-capstone/network/members
-[stars-shield]: https://img.shields.io/github/stars/IBUNHABIBU/final-capstone.svg?style=flat-square
-[stars-url]: https://github.com/IBUNHABIBU/final-capstone/stargazers
-[issues-shield]: https://img.shields.io/github/issues/IBUNHABIBU/final-capstone.svg?style=flat-square
-[issues-url]: https://github.com/IBUNHABIBU/final-capstone/issues
+[contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/upcred-reacttakehometest.svg?style=flat-square
+[contributors-url]: https://github.com/IBUNHABIBU/upcred-reacttakehometest/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/IBUNHABIBU/upcred-reacttakehometest.svg?style=flat-square
+[forks-url]: https://github.com/IBUNHABIBU/upcred-reacttakehometest/network/members
+[stars-shield]: https://img.shields.io/github/stars/IBUNHABIBU/upcred-reacttakehometest.svg?style=flat-square
+[stars-url]: https://github.com/IBUNHABIBU/upcred-reacttakehometest/stargazers
+[issues-shield]: https://img.shields.io/github/issues/IBUNHABIBU/upcred-reacttakehometest.svg?style=flat-square
+[issues-url]: https://github.com/IBUNHABIBU/upcred-reacttakehometest/issues
 
 ## 📝 License
 
