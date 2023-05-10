@@ -1,11 +1,9 @@
 import React from 'react';
-import OtpComponent from '../components/OtpComponent';
 
 const Home = () => (
   <div>
     <h1>
-      Home
-      <OtpComponent />
+      <Signup />
     </h1>
   </div>
 );

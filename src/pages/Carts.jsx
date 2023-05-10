@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Carts = () => {
-  const cart = useSelector((state) => state.carts);
-  cons
+  const cart = useSelector((state) => state.carts.products);
+  console.log(cart);
   return (
     <div>
       <h1>Carts</h1>
