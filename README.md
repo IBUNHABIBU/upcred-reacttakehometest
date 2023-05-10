@@ -17,12 +17,12 @@
   <h3 align="center"> A take-home exercise to create shopping cart </h3>
 
   <p align="center">
-    <a href="https://github.com/IBUNHABIBU/final-capstone/issues">Report Bug</a>
-    <a href="https://github.com/IBUNHABIBU/final-capstone/issues">Request Feature</a>
+    <a href="https://github.com/IBUNHABIBU/upcred-reacttakehometest/issues">Report Bug</a>
+    <a href="https://github.com/IBUNHABIBU/upcred-reacttakehometest/issues">Request Feature</a>
   </p>
 </p>
 
-![screenshot](https://github.com/IBUNHABIBU/final-capstone/blob/dev/public/HomePage.PNG)
+![screenshot](https://github.com/IBUNHABIBU/upcred-reacttakehometest/blob/dev/public/HomePage.PNG)
 
 ## Table of Contents
 
@@ -38,7 +38,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Car Rental is a full-stack web application built with React and Rails API to provide a user-friendly interface for booking car rentals.This project's frontend is built with React while the backend API can be found at the below
+
 [Link of the backend api](https://github.com/IBUNHABIBU/car-rent-booking-api)
 
 ### Story
