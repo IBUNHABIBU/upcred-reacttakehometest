@@ -56,7 +56,7 @@ A web application with signup with Google, Facebook, mobile with OTP, and email 
 
     - [ ] Email with OTP
 
-- [x] Error validation for Signup form and login form
+- [x] Error validation for Signup and login form
 
 - [x] Add products to cart
 
