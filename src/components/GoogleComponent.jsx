@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import { useDispatch } from 'react-redux';
 import { cliendId } from '../constants';
 import { loginGoogle } from '../redux/actions/actions';
+import { gapi } from 'gapi-script';
 
 const GoogleComponent = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    gapi.load('auth2', () => {
+      gapi.auth2.init({
+        client_id: cliendId,
+      });
+    });
+  }, []);
   const responseGoogle = (response) => {
     dispatch(loginGoogle(response));
     navigate('/products');

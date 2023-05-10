@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { gapi } from 'gapi-script';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import FacebookComponent from '../components/FacebookComponent';
@@ -12,15 +12,11 @@ import { setUser } from '../redux/actions/actions';
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const user = useSelector((state) => state.user);
+  localStorage.setItem('isLogged', user.isLogged);
   const [errors, setErrors] = useState('');
 
-  useEffect(() => {
-    gapi.load('auth2', () => {
-      gapi.auth2.init({
-        client_id: cliendId,
-      });
-    });
-  }, []);
+ 
 
   const handleSubmit = (data) => {
     axios.post(`${urlBase}/sessions`, {
@@ -38,6 +34,7 @@ const Login = () => {
       }
     });
   };
+
 
   return (
     <div className="login">

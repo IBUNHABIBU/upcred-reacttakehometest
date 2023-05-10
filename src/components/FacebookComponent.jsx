@@ -6,7 +6,8 @@ import { facebookAppId } from '../constants';
 import { loginFacebook } from '../redux/actions/actions';
 
 const FacebookComponent = () => {
-  const user = useSelector((state) => state.user);
+  // const user = useSelector((state) => state.user);
+  const isLogged = localStorage.getItem('isLogged');
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -16,7 +17,7 @@ const FacebookComponent = () => {
   };
 
   let fbContent;
-  if (user.isLogged) {
+  if (!isLogged) {
     fbContent = null;
   } else {
     fbContent = (

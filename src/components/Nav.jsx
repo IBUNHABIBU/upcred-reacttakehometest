@@ -11,6 +11,7 @@ const Nav = () => {
 
   const handleLogout = () => {
     dispatch(logout());
+    localStorage.removeItem('isLogged');
     navigate('/');
   };
 
