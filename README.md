@@ -43,14 +43,16 @@ A web application with signup with Google, Facebook, mobile with OTP, and email 
 
 [Link of the backend api](https://github.com/IBUNHABIBU/car-rent-booking-api)
 
-### Story
-
 ### Features
 
 - User authentication
-- Create cars and display them to the carlist page
-- Create appointments and display them to the list of appointments
-- SEO-friendly URl using slugify
+    -[x] Google
+    -[x] Facebook
+    -[] Mobile with OTP
+    -[] Email with OTP
+- [x] Add products to cart
+- [] Remove products from cart
+- [x] Checkout page
 
 ## Version2 features
  - Google, facebook, Github and OTP authentication with sms and email
