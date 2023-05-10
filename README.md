@@ -8,7 +8,6 @@
 <p align="center">
   <a href="git@github.com:IBUNHABIBU/final-capstone.git">
     <p align="center">
-      <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/rails/rails.png" alt="Rails" width="100" height="100">
       <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="React" width="100" height="100">
       <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/redux/redux.png" alt="Redux" width="100" height="100">
     </p>
