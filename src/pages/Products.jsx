@@ -27,7 +27,6 @@ const Products = () => {
     fetchProducts();
   });
 
-  // console.log(isLogged);
   if (!isLoggedIn) {
     return (
       <>
