@@ -32,6 +32,7 @@
   * [Features](#features)
   * [Requirements](#requirements)
   * [Useful commands](#useful-commands)
+  * [Project Presentation](#project-presentation)
   * [Live Demo](#live-demo)
 * [Contact](#Authors)
 * [Acknowledgements](#Acknowledgements)
@@ -118,6 +119,9 @@ Enjoy playing it.
 | `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
 | `npm run test` | Run all test suites |
 | `npm run lint -- --fix` | Fix all lint errors automatically |
+
+## Project Presentation
+[Project Presentation ](https://dai.ly/kFEO3jw9Rdy8QJz6v28)
 
 ## Live Demo
 [Live Demo ](https://ibunhabibucredchallenge.netlify.app/)
