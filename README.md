@@ -47,13 +47,21 @@ A web application with signup with Google, Facebook, mobile with OTP, and email 
 
 - User authentication signup/login/logout with
     -[x] Google
+
     -[x] Facebook
+
     -[x] email and password
+
     -[] Mobile with OTP
+
     -[] Email with OTP
+
 - [x] Error validation for Signup form and login form
+
 - [x] Add products to cart
+
 - [] Remove products from cart
+
 - [x] Checkout page
     
 <!-- BUILD WITH -->
