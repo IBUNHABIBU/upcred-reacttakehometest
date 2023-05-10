@@ -53,9 +53,6 @@ const Products = () => {
     axios.post(`${fakeStoreUrl}/carts`, body)
       .then((response) => {
         dispatch(addToCart(response.data));
-      })
-      .catch((error) => {
-        console.log(error);
       });
   };
 
