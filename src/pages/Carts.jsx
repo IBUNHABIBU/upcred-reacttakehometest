@@ -26,16 +26,15 @@ const Carts = () => {
           <table className="cart-table">
             <tbody>
               <tr key={id} className="cart-row">
-                <td>
+                <td className='cart-item'>
                 <img src={image} alt={title} className="cart-item__image" />
                 <p className="cart-item__title">{title}</p>
                 </td>
-                <p className="cart-item__quantity">
-                  <bold>
-                    Qty:
+                <td className="cart-item__quantity">
+                  
                     {quantity}
-                  </bold>
-                </p>
+                
+                </td>
               </tr>
             </tbody>
           </table>
