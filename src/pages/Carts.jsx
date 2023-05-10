@@ -52,7 +52,7 @@ const Carts = () => {
         ))
       }
       </table>
-      <p className='total'>
+      <p className="total">
         Total price:
         { cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}
       </p>
