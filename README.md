@@ -69,24 +69,24 @@ A web application with signup with Google, Facebook, mobile with OTP, and email 
 Built With
 This project was built using the following technologies:
 
-- React
-  - ES6
+- [x] React
+  - [x] ES6
 
-  - Higher-order component to make the nav
+  - [x] Higher-order component to make the nav
 
-  - React router v6
+  - [x] React router v6
 
-  - DRY principle
+  - [x] DRY principle
 
-    - Reusable Form component used all over the application, such as login, signup
-- LocalStorage
+    - [x] Reusable Form component used all over the application, such as login, signup
+- [x] LocalStorage
    - [x] User authentication
    - [ ] Cart
-- Redux
+- [x] Redux
 
-- SASS
+- [x] SASS
 
-  - BEM
+  - [x] BEM
 
 ### Requirement
 
