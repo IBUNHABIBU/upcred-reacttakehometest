@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { twillioAccountId, twillioAuthToken, twillioBaseUrl } from '../constants';
 
 const OtpComponent = () => {
   const [phoneNo, setPhoneNo] = useState('');
@@ -9,31 +8,29 @@ const OtpComponent = () => {
 
   const generateOtp = () => {
     const otpValue = Math.floor(832 + Math.random() * 9000).toString();
-    console.log(phoneNo, 'phone number');
     const requestOptions = {
       To: '+255689982923',
       From: '+255752443624',
       Body: `Your OTP is ${otpValue}`,
     };
 
-    axios.post(`${twillioBaseUrl}/Accounts/${twillioAccountId}/Messages.json`,
+    axios.post('url/Accounts/accountId/Messages.json',
       requestOptions,
       {
         auth: {
-          username: twillioAccountId,
-          password: twillioAuthToken,
+          username: 'twillioAccountId',
+          password: 'twillioAuthToken',
         },
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
       })
       .then((response) => {
-        console.log(response);
+        if(response.status === 200) {
         setSentOtp(otpValue);
+        }
       })
-      .catch((error) => {
-        console.log('Error sending OTP SMS: ', error.response);
-      });
+    
   };
 
   const handlePhoneChange = (event) => {
