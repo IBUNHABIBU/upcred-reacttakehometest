@@ -11,7 +11,6 @@ import { setUser } from '../redux/actions/actions';
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const user = useSelector((state) => state.user);
   const [errors, setErrors] = useState('');
 
   const handleSubmit = (data) => {
@@ -23,7 +22,7 @@ const Login = () => {
     },
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
-        dispatch(setUser(response.data)); 
+        dispatch(setUser(response.data));
         localStorage.setItem('isLogged', true);
         navigate('/products');
       } else {
