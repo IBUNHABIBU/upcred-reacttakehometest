@@ -9,14 +9,6 @@ const Products = () => {
   const products = useSelector((state) => state.products);
   const user = useSelector((state) => state.user);
 
-  if (!user.isLogged) {
-    return (
-      <>
-        <Navigate to="/login" />
-      </>
-    );
-  }
-
   const [cart, setCart] = useState([]);
   const navigate = useNavigate();
 
@@ -29,6 +21,14 @@ const Products = () => {
     };
     fetchProducts();
   }, []);
+
+  if (!user.isLogged) {
+    return (
+      <>
+        <Navigate to="/login" />
+      </>
+    );
+  }
 
   const AddCart = (productId) => {
     const productInTheCart = cart.find((item) => item.productId === productId);
