@@ -23,6 +23,7 @@ const Signup = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
+        localStorage.setItem('isLogged', true);
         navigate('/products');
         setMessage('User created successfully');
       }
