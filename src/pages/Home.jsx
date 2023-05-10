@@ -3,7 +3,7 @@ import Signup from './Signup';
 
 const Home = () => (
   <div>
-      <Signup />
+    <Signup />
   </div>
 );
 
