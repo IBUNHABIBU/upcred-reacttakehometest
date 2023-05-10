@@ -28,7 +28,9 @@ const Carts = () => {
               <tr className="cart-row">
                 <td className="cart-item">
                   <img src={image} alt={title} className="cart-item__image" />
-                  <p className="cart-item__title">{title}</p>
+                </td>
+                <td>
+                  {title}
                 </td>
                 <td className="cart-item__quantity">
                   {quantity}
