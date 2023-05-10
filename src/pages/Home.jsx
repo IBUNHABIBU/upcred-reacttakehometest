@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom';
 import Signup from './Signup';
 
 const Home = () => {
+  const isLogged = localStorage.getItem('isLogged');
   if (isLogged) {
     return (
       <>
