@@ -39,6 +39,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+A web application with signup with Google, Facebook, mobile with OTP, and email with OTP. Now once the login is done, users can go ahead and add different products to their carts, and then they can be moved to the checkout page
+
 [Link of the backend api](https://github.com/IBUNHABIBU/car-rent-booking-api)
 
 ### Story
