@@ -23,7 +23,7 @@ const Signup = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
-        navigate('/models');
+        navigate('/products');
         setMessage('User created successfully');
       }
       setErrors(response.data.error);
