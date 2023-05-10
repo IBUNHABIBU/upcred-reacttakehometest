@@ -24,12 +24,13 @@ const Carts = () => {
           <tr>
             <th>Product image</th>
             <th>Title</th>
+            <th>Price</th>
             <th>Quantity</th>
           </tr>
         </thead>
         {
         cartItems.map(({
-          id, image, title, quantity,
+          id, image, title, price, quantity,
         }) => (
 
           <tbody key={id}>
@@ -40,6 +41,9 @@ const Carts = () => {
               <td>
                 {title}
               </td>
+              <td>
+                {price}
+              </td>
               <td className="cart-item__quantity">
                 {quantity}
               </td>
@@ -48,6 +52,10 @@ const Carts = () => {
         ))
       }
       </table>
+      <p className='total'>
+        Total price:
+        { cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}
+      </p>
     </div>
   );
 };
