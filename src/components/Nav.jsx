@@ -18,7 +18,10 @@ const Nav = () => {
     <nav className="nav">
       <div className="nav__logo">
         <span />
-        <NavLink to="/" className="link">user: {user.name}</NavLink>
+        <NavLink to="/" className="link">
+          user:
+          {user.name}
+        </NavLink>
       </div>
       <div className="nav__list">
         {
