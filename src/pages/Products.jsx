@@ -20,7 +20,7 @@ const Products = () => {
       dispatch(addProducts(data));
     };
     fetchProducts();
-  }, []);
+  }, [dispatch]);
 
   if (!user.isLogged) {
     return (
